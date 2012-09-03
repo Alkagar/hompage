@@ -39,6 +39,7 @@ body { background-color:#101010; height:100%; color:#FFFFFF; font-size:12px; fon
 
 a { text-decoration:none; color:#FFFFFF; }
 a:hover { color:#F27405; }
+.hide { display:none; }
 
 /* ##-colors
     black:
