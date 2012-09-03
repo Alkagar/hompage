@@ -6,7 +6,7 @@
     $image = new AImage();
     $image->load($file);
     if(isset($_GET['resize'])) {
-        $image->resizeToWidth(200);
+        $image->resize(200, 200);
     } 
     if(isset($_GET['bw'])) {
         $image->convertToBw();

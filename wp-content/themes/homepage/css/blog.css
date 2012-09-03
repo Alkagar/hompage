@@ -12,8 +12,8 @@ body { background-color:#101010; height:100%; color:#FFFFFF; font-size:12px; fon
         .menu-social li { list-style:none; display:inline; margin:5px 0px; }
         .menu-social a { color:#7F7966; }
     .footer { height:80px; width:200px; border-top:1px solid #7F7966; position:fixed; left:0px; bottom:0px; text-align:center; z-index:2; }
-        .login { height:80px; width:200px; position:fixed; z-index:2; background-image:url('../gfx/sidebar-login.png'); }
-        .login:hover { background-position:0px -80px; }
+        .login { height:80px; width:200px; z-index:2; background-image:url('../gfx/sidebar-login.png'); }
+        .login:hover { width:200px; background-position:0px -80px; }
 .content { float:left; margin-left:200px; width: 900px; }
     .post-list-box { width: 200px; height:300px; background-color:#000000; border:1px solid #40321D; margin:5px 5px; float:left; }
         .post-list-photo-thumb { width:200px; height:200px; background-image:url('../gfx/blog-photo-bw.png'); cursor:pointer; }
