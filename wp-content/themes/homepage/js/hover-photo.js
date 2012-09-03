@@ -1,12 +1,15 @@
 $(document).ready(function() {
     $('.post-list-box').each(function() {
         var post = $(this);
-        var thumbs = post.find('.post-thumbnail');
-        var thumb_bw = thumbs.find('a[title="main_bw"]');
-        var thumb_c = thumbs.find('a[title="main_c"]');
+        var thumbs = $.trim(post.find('.post-thumbnail').text());
+
+        var thumb_bw = thumbs + '&resize=true&bw=true';
+        var thumb_c = thumbs + '&resize=true';
+
         var thumbnail = post.find('.post-list-photo-thumb');
-        var showThumbnail = 'url("' + thumb_bw.attr('href') + '")';
-        var hoverThumbnail = 'url("' + thumb_c.attr('href') + '")';
+        
+        var showThumbnail = 'url("' + thumb_bw + '")';
+        var hoverThumbnail = 'url("' + thumb_c + '")';
         thumbnail.css('background-image', showThumbnail);
         thumbnail.hover(function() {
             thumbnail.css('background-image', hoverThumbnail);

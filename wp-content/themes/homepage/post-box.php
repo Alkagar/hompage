@@ -15,8 +15,9 @@
             if ( $attachments ) {
                 foreach ( $attachments as $attachment ) {
                     $title = apply_filters( 'the_title', $attachment->post_title );
-                    if(in_array($title, array('main_c', 'main_bw'))) {
-                        echo the_attachment_link($attachment->ID);
+                    if(in_array($title, array('thumbnail'))) {
+                        $bimg = base64_encode(alk_get_attachment_url($attachment->ID));
+                        echo get_bloginfo('stylesheet_directory') . '/image.php?img=' . $bimg; 
                     }
                 }
             }
