@@ -8,8 +8,11 @@
         <meta charset="utf-8" />
         <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.6.0/build/cssreset/cssreset-min.css">
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+        <script src="<?php bloginfo('stylesheet_directory'); ?>/js/jquery.colorbox.js"></script>
+        <script src="<?php bloginfo('stylesheet_directory'); ?>/js/hover-photo.js"></script>
         <link href='http://fonts.googleapis.com/css?family=Spinnaker' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/css/blog.css" type="text/css" media="screen" />
+        <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/css/colorbox.css" type="text/css" media="screen" />
     </head>
     <body>
         <div class='page'>

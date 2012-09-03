@@ -1,8 +1,3 @@
-<?php get_header(); ?>
-<div class='home-header'>
-    <h1>programmers blog <span class='size80p'>about it adventures, photo and others...</span></h1>
-</div>
-<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 <div class='post-list-box'>
     <div class='post-list-photo-thumb'></div>
     <div class='post-date size80p'><?php the_time('j F Y'); ?></div>
@@ -20,26 +15,11 @@
             if ( $attachments ) {
                 foreach ( $attachments as $attachment ) {
                     $title = apply_filters( 'the_title', $attachment->post_title );
-                    if(in_array($title, array('main_c', 'main_bw', 'main_full'))) {
+                    if(in_array($title, array('main_c', 'main_bw'))) {
                         echo the_attachment_link($attachment->ID);
-                        $bimg = base64_encode(alk_get_attachment_url($attachment->ID));
-                        echo get_bloginfo('stylesheet_directory') . '/image.php?img=' . $bimg; 
                     }
                 }
             }
         ?>
     </div>
 </div>
-<?php endwhile; else: ?>
-<p><?php _e('Sorry, no posts yet.'); ?></p>
-<?php endif; ?>
-<script type='text/javascript'>
-    $('.post-list-title').click(function() {
-            var ss = $(this).parent('.post-list-box').find('.post-thumbnail a[title="main_full"]').colorbox({
-                    height: '100%'
-                });
-            ss.click();
-            return false;
-    });
-</script>
-<?php get_footer(); ?>
