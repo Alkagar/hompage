@@ -22,7 +22,7 @@
                 </div>
                 <div class='navigation'>
                     <ul class='menu-page'>
-                        <li><a href='/category/home'>home</a></li>
+                       <li><a href='/home'>home</a></li>
                         <?php
                             $menu = array('it' => 'blog', 'photo' => 'photo', 'tea' => 'tea');
                             foreach($menu as $name => $link) {
@@ -33,7 +33,7 @@
                             <?php
                             }
                         ?>
-                        <li><a href='/category/about'>about</a></li>
+                        <li><a href='/about'>about</a></li>
                     </ul>
                     <ul class='menu-social'>
                         <li><a href=''>F</a></li>

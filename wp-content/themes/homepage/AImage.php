@@ -107,6 +107,15 @@
          $this->resizeToFit($width, $height, $newWidth,$newHeight);
       }
 
+      function scaleToLongest($longest)
+      {
+         if($this->getWidth() > $this->getHeight()) {
+            $this->resizeToHeight($longest);
+         } else {
+            $this->resizeToWidth($longest);
+         }
+      }
+
       function resizeToFit($width,$height, $newWidth, $newHeight) 
       {
          $new_image = imagecreatetruecolor($width, $height);
@@ -121,7 +130,7 @@
                imagecolortransparent($new_image, $current_transparent);
             } elseif( $this->image_type == IMAGETYPE_PNG) {
                imagealphablending($new_image, false);
-               $color = imagecolorallocatealpha($new_image, 255, 255, 255, 127);
+               $color = imagecolorallocatealpha($new_image, 0, 0, 0, 127);
                imagefill($new_image, 0, 0, $color);
                imagesavealpha($new_image, true);
             }

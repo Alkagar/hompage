@@ -1,6 +1,10 @@
+<?php
+   /*
+   Template Name: aboutpage
+   */
+?>
 <?php get_header(); ?>
 <div class='post'>
-
     <div class='home-header'>
         <h1>programmers blog <span class='size80p'>about it adventures, photo and others...</span></h1>
     </div>
