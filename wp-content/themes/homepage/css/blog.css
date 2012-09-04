@@ -10,7 +10,7 @@ body { background-color:#101010; height:100%; color:#FFFFFF; font-size:12px; fon
         .menu-page a { color:#7F7966; }
         .menu-social { margin-top:50px; }
         .menu-social li { list-style:none; display:inline; margin:5px 0px; }
-        .menu-social a { color:#7F7966; }
+        .menu-social a { color:#7F7966; padding-left:10px; padding-right:10px; color:#FFFFFF; }
     .footer { height:80px; width:200px; border-top:1px solid #7F7966; position:fixed; left:0px; bottom:0px; text-align:center; z-index:2; }
         .login { height:80px; width:200px; z-index:2; display:block; background-image:url('../gfx/sidebar-login.png'); }
         .login:hover { background-position:0px -80px; }
