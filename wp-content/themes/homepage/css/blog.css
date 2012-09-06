@@ -1,5 +1,5 @@
 html { background-color:#101010; height:100%; }
-body { background-color:#101010; height:100%; color:#FFFFFF; font-size:12px; font-family:"Spinnaker", sans-serif; }
+body { background-color:#101010; height:100%; color:#FFFFFF; font-size:14px; font-family:"Spinnaker", sans-serif; }
 
 .sidebar { background-color:#000000; width:200px; height:100%; position:fixed; top:0px; left:0px; border-right:1px solid #7F7966; }
     .sidebar-logo { height:80px; width:200px; border-bottom:1px solid #7F7966; text-align:center; display:block; }

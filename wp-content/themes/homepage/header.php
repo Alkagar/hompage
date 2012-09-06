@@ -38,6 +38,7 @@
                </ul>
                <ul class='menu-social'>
                   <li><a href='https://www.facebook.com/jakub.mrowiec.5'>F</a></li>
+                  <li><a href='http://www.flickr.com/people/75799873@N06/'>Fcr</a></li>
                   <li><a href='https://github.com/alkagar'>GH</a></li>
                   <li><a href='mailto:jakub [at] mrowiec.org'>@</a></li>
                </ul>
