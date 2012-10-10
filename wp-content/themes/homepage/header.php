@@ -11,9 +11,12 @@
       <script src="<?php bloginfo('stylesheet_directory'); ?>/js/jquery.colorbox.js"></script>
       <script src="<?php bloginfo('stylesheet_directory'); ?>/js/hover-photo.js"></script>
       <script src="<?php bloginfo('stylesheet_directory'); ?>/js/show-photo.js"></script>
+      <script src="http://yandex.st/highlightjs/7.2/highlight.min.js"></script>
       <link href='http://fonts.googleapis.com/css?family=Spinnaker' rel='stylesheet' type='text/css'>
       <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/css/blog.css" type="text/css" media="screen" />
       <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/css/colorbox.css" type="text/css" media="screen" />
+      <link rel="stylesheet" href="http://yandex.st/highlightjs/7.2/styles/pojoaque.min.css">
+      <script>hljs.initHighlightingOnLoad();</script>
    </head>
    <body>
       <div class='page'>
