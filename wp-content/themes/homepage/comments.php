@@ -22,7 +22,7 @@
 <?php else : // If there are no comments yet ?>
 <?php endif; ?>
 <?php if ( comments_open() ) : ?>
-<div class='comments-form'>
+<div class='comments-form' style='display:none;'>
     <h3 id="postcomment"><?php _e('Leave a comment'); ?></h3>
 
     <?php if ( get_option('comment_registration') && !$user_ID ) : ?>
@@ -45,3 +45,6 @@
 <?php else : // Comments are closed ?>
     <p><?php _e('Sorry, the comment form is closed at this time.'); ?></p>
 <?php endif; ?>
+
+<?php $wp_query->is_single = true; ?>
+<h3><?php comments_popup_link('add your comment', 'add your comment', 'add your comment'); ?></h3>

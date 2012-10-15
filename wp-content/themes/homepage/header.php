@@ -17,6 +17,7 @@
       <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/css/colorbox.css" type="text/css" media="screen" />
       <link rel="stylesheet" href="http://yandex.st/highlightjs/7.2/styles/pojoaque.min.css">
       <script>hljs.initHighlightingOnLoad();</script>
+      <?php comments_popup_script(700, 600); ?>
    </head>
    <body>
       <div class='page'>

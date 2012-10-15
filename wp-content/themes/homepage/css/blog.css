@@ -31,8 +31,8 @@ body { background-color:#101010; height:100%; color:#FFFFFF; font-size:14px; fon
         .post li { list-style-type: square; margin:5px 25px; color:#777777; }
         .post code { width:750px; overflow:auto; margin-left:50px; padding:10px;}
         .post-comments { margin:25px; margin-left:50px; }
-            .comments-list { margin-top:10px; }
-            .comments-form { margin-top:10px; }
+            .comments-list { margin-top:10px; margin-left:15px; }
+            .comments-form { margin-left:15px; margin-top:10px; }
                 .comments-form label { color:#7F7966; }
                 .comments-form input[type="submit"] {  width:150px; }   
                 .comments-form input { font-size:12px; border:1px solid #7F7966; padding:3px; background-color:#BBBBBB; width:400px; margin-top:5px;}   
