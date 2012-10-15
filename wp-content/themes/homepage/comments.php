@@ -1,3 +1,4 @@
+<?php $wp_query->is_single = true; ?>
 <?php if ( $comments ) : ?>
 <h3><?php echo comments_number(); ?></h3>
 <div class='table comments-list'>
@@ -8,7 +9,7 @@
     </div>
     <div class='row'>
         <div class='cell comment-edit'>
-            <?php edit_comment_link(__("Edit This")); ?>
+           &nbsp;
         </div>
         <div class='cell comment-menu'>
             <?php comment_date() ?> <?php comment_time() ?>
@@ -46,5 +47,6 @@
     <p><?php _e('Sorry, the comment form is closed at this time.'); ?></p>
 <?php endif; ?>
 
-<?php $wp_query->is_single = true; ?>
-<h3><?php comments_popup_link('add your comment', 'add your comment', 'add your comment'); ?></h3>
+<p>
+<?php comments_popup_link('add your comment', 'add your comment', 'add your comment'); ?>
+</p>

@@ -21,92 +21,67 @@
       <link rel="stylesheet" href="http://yandex.st/highlightjs/7.2/styles/pojoaque.min.css">
       <script>hljs.initHighlightingOnLoad();</script>
    </head>
-   <body id="commentspopup">
-      <h1 id="header"><a href="" title="<?php echo get_option('blogname'); ?>"><?php echo get_option('blogname'); ?></a></h1>
-
-      <p><a href="<?php echo get_post_comments_feed_link($post->ID); ?>"><?php _e("<abbr title=\"Really Simple Syndication\">RSS</abbr> feed for comments on this post."); ?></a></p>
-
-      <?php
-         // this line is WordPress' motor, do not delete it.
-         $commenter = wp_get_current_commenter();
-         extract($commenter);
-         $comments = get_approved_comments($id);
-         $commentstatus = get_post($id);
-
-
-
-
-
-         if (!empty($commentstatus->post_password) && $_COOKIE['wp-postpass_'. COOKIEHASH] != $commentstatus->post_password) {
-            echo(get_the_password_form());
-         } else { ?>
-
-
-         <?php if ('open' == $commentstatus->comment_status) { ?>
-
-<div class='comments-form'>
-    <h3 id="postcomment"><?php _e('Leave a comment'); ?></h3>
-        <form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post" id="commentform">
-	<input type="hidden" name="redirect_to" value="<?php echo attribute_escape($_SERVER["REQUEST_URI"]); ?>" />
-            <input type="text" name="author" id="author" value="<?php echo $comment_author; ?>" size="22" tabindex="1" />
-            <label for="author"><small><?php _e('Name'); ?> <?php if ($req) _e('*'); ?></small></label>
-            <input type="text" name="email" id="email" value="<?php echo $comment_author_email; ?>" size="22" tabindex="2" />
-            <label for="email"><small><?php _e('Mail (will not be published)');?> <?php if ($req) _e('*'); ?></small></label>
-            <input type="text" name="url" id="url" value="<?php echo $comment_author_url; ?>" size="22" tabindex="3" />
-            <label for="url"><small><?php _e('Website'); ?></small></label>
-            <textarea name="comment" id="comment" cols="100%" rows="10" tabindex="4"></textarea><br />
-            <input name="submit" type="submit" id="submit" tabindex="5" value="<?php echo attribute_escape(__('Submit Comment')); ?>" />
-            <input type="hidden" name="comment_post_ID" value="<?php echo $id; ?>" />
-            <?php do_action('comment_form', $post->ID); ?>
-        </form>
-     </div>
-
-         <?php } else { // comments are closed ?>
-         <p><?php _e("Sorry, the comment form is closed at this time."); ?></p>
-         <?php } ?>
-
-
-
-         <?php if ($comments) { ?>
-<div class='table comments-list'>
-            <?php foreach ($comments as $comment) { ?>
-            <div class='row comment-row' id="comment-<?php comment_ID() ?>">
-               <div class='cell comment-avatar'> <?php echo get_avatar( $comment, 32 ); ?> </div>
-               <div class='cell comment-content'> <p> <?php comment_text() ?> </p> </div>
-            </div>
-            <div class='row'>
-               <div class='cell comment-edit'>
-                  <?php edit_comment_link(__("Edit This")); ?>
-               </div>
-               <div class='cell comment-menu'>
-                  <?php comment_date() ?> <?php comment_time() ?>
-                  <?php _e('by'); ?> 
-                  <?php comment_author_link() ?>,
-               </div> 
-            </div>
-            <?php } // end for each comment ?>
+   <body>
+      <div class='post'>
+         <div class='home-header'>
+            <h1>programmers blog <span class='size80p'>about it adventures, photo and others...</span></h1>
          </div>
-         <?php } else { // this is displayed if there are no comments so far ?>
-         <?php } ?>
-<?php
-         } // end password check
-      ?>
-
-      <div><strong><a href="javascript:window.close()"><?php _e("Close this window."); ?></a></strong></div>
-
-      <?php // if you delete this the sky will fall on your head
-         endwhile;
-      ?>
-
-      <!-- // this is just the end of the motor - don't touch that line either :) -->
-      <?php //} ?>
-      <script type="text/javascript">
-         <!--
-         document.onkeypress = function esc(e) {
-               if(typeof(e) == "undefined") { e=event; }
-               if (e.keyCode == 27) { self.close(); }
-         }
-         // -->
-      </script>
+         <?php
+            // this line is WordPress' motor, do not delete it.
+            $commenter = wp_get_current_commenter();
+            extract($commenter);
+            $comments = get_approved_comments($id);
+            $commentstatus = get_post($id);
+            if (!empty($commentstatus->post_password) && $_COOKIE['wp-postpass_'. COOKIEHASH] != $commentstatus->post_password) {
+               echo(get_the_password_form());
+            } else { ?>
+            <?php if ('open' == $commentstatus->comment_status) : ?>
+            <div class='comments-form'>
+               <form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post" id="commentform">
+                  <input type="hidden" name="redirect_to" value="<?php echo attribute_escape($_SERVER["REQUEST_URI"]); ?>" />
+                  <input type="text" name="author" id="author" value="<?php echo $comment_author; ?>" size="22" tabindex="1" />
+                  <label for="author"><small><?php _e('Name'); ?> <?php if ($req) _e('*'); ?></small></label><br />
+                  <input type="text" name="email" id="email" value="<?php echo $comment_author_email; ?>" size="22" tabindex="2" />
+                  <label for="email"><small><?php _e('Mail (will not be published)');?> <?php if ($req) _e('*'); ?></small></label><br />
+                  <input type="text" name="url" id="url" value="<?php echo $comment_author_url; ?>" size="22" tabindex="3" />
+                  <label for="url"><small><?php _e('Website'); ?></small></label><br />
+                  <textarea name="comment" id="comment" cols="100%" rows="10" tabindex="4"></textarea><br />
+                  <?php if( function_exists( 'cptch_display_captcha_custom' ) ) { echo "<input type='hidden' name='cntctfrm_contact_action' value='true' />"; echo cptch_display_captcha_custom(); } ?><br />
+                  <input name="submit" type="submit" id="submit" tabindex="5" value="<?php echo attribute_escape(__('Submit Comment')); ?>" /><br />
+                  <input type="hidden" name="comment_post_ID" value="<?php echo $id; ?>" />
+                  <?php do_action('comment_form', $post->ID); ?>
+               </form>
+            </div>
+            <?php else : // comments are closed ?>
+            <?php _e("Sorry, the comment form is closed at this time."); ?>
+            <?php endif; ?>
+            <hr />
+            <a href="<?php echo get_post_comments_feed_link($post->ID); ?>"><?php _e("RSS feed"); ?></a>
+            <hr />
+            <?php if ($comments) { ?>
+            <div class='table comments-list'>
+               <?php foreach ($comments as $comment) { ?>
+               <div class='row comment-row' id="comment-<?php comment_ID() ?>">
+                  <div class='cell comment-avatar'> <?php echo get_avatar( $comment, 32 ); ?> </div>
+                  <div class='cell comment-content'> <p> <?php comment_text() ?> </p> </div>
+               </div>
+               <div class='row'>
+                  <div class='cell comment-edit'>
+                  </div>
+                  <div class='cell comment-menu'>
+                     <?php comment_date() ?> <?php comment_time() ?>
+                     <?php _e('by'); ?> 
+                     <?php comment_author_link() ?>,
+                  </div> 
+               </div>
+               <?php } // end for each comment ?>
+            </div>
+            <?php } else { // this is displayed if there are no comments so far ?>
+            <?php } ?>
+            <?php
+            } // end password check
+         ?>
+         <?php endwhile; ?>
+      </div>
    </body>
 </html>
