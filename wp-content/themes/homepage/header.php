@@ -23,7 +23,7 @@
       <div class='page'>
          <div class='sidebar'>
             <div class='sidebar-logo'>
-               <a href='http://mrowiec.org' class='logo' style="font-size:600%;">a</a>
+               <a href='http://mrowiec.org' class='logo' style="font-size:600%;"></a>
             </div>
             <div class='navigation'>
                <ul class='menu-page'>

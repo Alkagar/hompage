@@ -3,8 +3,8 @@ body { background-color:#101010; height:100%; color:#FFFFFF; font-size:14px; fon
 
 .sidebar { background-color:#000000; width:200px; height:100%; position:fixed; top:0px; left:0px; border-right:1px solid #7F7966; }
     .sidebar-logo { height:80px; width:200px; border-bottom:1px solid #7F7966; text-align:center; display:block; }
-        .logo { margin-top:-10px; left:0px; top:0px; height:80px; width:200px; /*background-image:url('../gfx/sidebar-logo.png');*/ display:block; z-index:2; position:fixed; }
-        .logo:hover { background-position:0px -80px; }
+        .logo { margin-top:-10px; left:0px; top:0px; height:80px; width:200px; background-image:url('../gfx/a-logo.png'); background-position:0px 10px; display:block; z-index:2; position:fixed; }
+        .logo:hover { background-position:0px -70px; }
     .navigation { margin-top:-100px; width:200px; height:100px; text-align:center; position:fixed; top:50%; z-index:1; display:block; }
         .menu-page li { list-style:none; font-weight:bold; color:#7F7966; margin-top:8px; margin-bottom:8px; }
         .menu-page a { color:#7F7966; }
