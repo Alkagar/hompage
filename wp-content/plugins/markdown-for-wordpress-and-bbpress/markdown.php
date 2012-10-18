@@ -90,7 +90,7 @@ Author URI: http://mitcho.com/code/
 */
 
 function mdwp_add_p($text) {
-	if (!preg_match('{^$|^<(p|ul|ol|dl|pre|blockquote)>}i', $text)) {
+	if (!preg_match('{^$|^<(p|ul|ol|dl|pre|code|blockquote)>}i', $text)) {
 		$text = '<p>'.$text.'</p>';
 		$text = preg_replace('{\n{2,}}', "</p>\n\n<p>", $text);
 	}

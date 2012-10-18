@@ -29,7 +29,6 @@ body { background-color:#101010; height:100%; color:#FFFFFF; font-size:14px; fon
         .post h1 { font-size:250%; text-transform:lowercase; }
         .post p { margin:20px 25px; font-size:120%; color:#777777; line-height:140%; }
         .post li { list-style-type: square; margin:5px 25px; color:#777777; }
-        .post code { width:750px; overflow:auto; margin-left:50px; padding:10px;}
         .post-comments { margin:25px; margin-left:50px; }
             .comments-list { margin-top:10px; margin-left:15px; }
             .comments-form { margin-left:15px; margin-top:10px; }
