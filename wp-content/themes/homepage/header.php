@@ -47,10 +47,10 @@
                   <li><a href='/about'>about</a></li>
                </ul>
                <ul class='menu-social'>
-                  <li><a href='https://www.facebook.com/jakub.mrowiec.5'>F</a></li>
-                  <li><a href='http://www.flickr.com/people/75799873@N06/'>Fcr</a></li>
-                  <li><a href='https://github.com/alkagar'>GH</a></li>
-                  <li><a href='mailto:jakub [at] mrowiec.org'>@</a></li>
+                  <li><a href='https://www.facebook.com/jakub.mrowiec.5'><img src="<?php bloginfo('stylesheet_directory'); ?>/gfx/f.png" width="16" class='site_social_ico' alt="f" /></a></li>
+                  <li><a href='http://www.flickr.com/people/75799873@N06/'><img src="<?php bloginfo('stylesheet_directory'); ?>/gfx/fcr.png" width="16" class='site_social_ico' alt="fcr" /></a></li>
+                  <li><a href='https://github.com/alkagar'><img src="<?php bloginfo('stylesheet_directory'); ?>/gfx/gh.png" width="16" class='site_social_ico' alt="gh" /></a></li>
+                  <li><a href='mailto:jakub [at] mrowiec.org'><img src="<?php bloginfo('stylesheet_directory'); ?>/gfx/mail.png" width="16" class='site_social_ico' alt="@" /></a></li>
                </ul>
             </div>
             <div class='footer'>
