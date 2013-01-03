@@ -16,14 +16,6 @@
       <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/css/colorbox.css" type="text/css" media="screen" />
       <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/css/codecolorer.css" type="text/css" media="screen" />
       <?php comments_popup_script(700, 600); ?>
-      <script>
-         //$(document).ready(function() {
-               //function showHiddenParagraphs() {
-                     //$("p.hidden").fadeIn(500);
-               //}
-               //setTimeout(showHiddenParagraphs, 1000);
-         //});
-      </script>
    </head>
    <body>
       <div class='page'>
@@ -47,9 +39,9 @@
                   <li><a href='/about'>about</a></li>
                </ul>
                <ul class='menu-social'>
-                  <li><a href='https://www.facebook.com/jakub.mrowiec.5'><img src="<?php bloginfo('stylesheet_directory'); ?>/gfx/f.png" width="16" class='site_social_ico' alt="f" /></a></li>
-                  <li><a href='http://www.flickr.com/people/75799873@N06/'><img src="<?php bloginfo('stylesheet_directory'); ?>/gfx/fcr.png" width="16" class='site_social_ico' alt="fcr" /></a></li>
-                  <li><a href='https://github.com/alkagar'><img src="<?php bloginfo('stylesheet_directory'); ?>/gfx/gh.png" width="16" class='site_social_ico' alt="gh" /></a></li>
+                  <li><a target='_blank' href='https://www.facebook.com/jakub.mrowiec.5'><img src="<?php bloginfo('stylesheet_directory'); ?>/gfx/f.png" width="16" class='site_social_ico' alt="f" /></a></li>
+                  <li><a target='_blank' href='http://www.flickr.com/photos/alkagar'><img src="<?php bloginfo('stylesheet_directory'); ?>/gfx/fcr.png" width="16" class='site_social_ico' alt="fcr" /></a></li>
+                  <li><a target='_blank' href='https://github.com/alkagar'><img src="<?php bloginfo('stylesheet_directory'); ?>/gfx/gh.png" width="16" class='site_social_ico' alt="gh" /></a></li>
                   <li><a href='mailto:jakub [at] mrowiec.org'><img src="<?php bloginfo('stylesheet_directory'); ?>/gfx/mail.png" width="16" class='site_social_ico' alt="@" /></a></li>
                </ul>
             </div>
