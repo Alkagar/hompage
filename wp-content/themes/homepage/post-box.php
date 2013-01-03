@@ -35,6 +35,9 @@
                if($description) {
                   echo "<div class='hide post-thumbnail-description'>$description</div>";
                }
+              echo "<div class='hide post-thumbnail-comment'>";
+              comments_popup_link('add your comment', 'add your comment', 'add your comment');
+              echo "</div>";
             }
          }
       ?>

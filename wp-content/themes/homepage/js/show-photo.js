@@ -4,8 +4,10 @@ $(document).ready(function() {
       console.log(listBox);
       var url = $.trim(listBox.find('.post-thumbnail').text());
       var alink = $('<a></a>').attr('href', url).css('display', 'none');
+      var commentLink = listBox.find('.post-thumbnail-comment');
       var description = listBox.find('.post-thumbnail-description');
-      alink.attr('title', description.text());
+      commentLinkA = commentLink.find('a').css('color', '#333333');
+      alink.attr('title', description.text() +"<br />" + commentLink.html());
       var img = $('<img />').attr('src', url);
       alink.html(img);
       listBox.append(alink);
