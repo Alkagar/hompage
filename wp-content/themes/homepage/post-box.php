@@ -14,7 +14,6 @@
    <div class='post-date size80p'><?php the_time('j F Y'); ?></div>
    <div class='post-tags size80p'><?php the_tags(''); ?></div>
    <div class='post-list-title'><a href='<?php the_permalink() ?>' title='Permanent Link to <?php the_title_attribute(); ?>'><?php the_title(); ?></a></div>
-   <div class='hide post-thumbnail'>
       <?php
          $args = array(
             'post_type' => 'attachment',
@@ -26,12 +25,17 @@
          if ( $attachments ) {
             foreach ( $attachments as $attachment ) {
                $title = apply_filters( 'the_title', $attachment->post_title );
+               $description = $attachment->post_content;
                if(in_array($title, array('thumbnail'))) {
                   $bimg = base64_encode(alk_get_attachment_url($attachment->ID));
+                  echo "<div class='hide post-thumbnail'>";
                   echo get_bloginfo('stylesheet_directory') . '/image.php?img=' . $bimg; 
+                  echo "</div>";
+               }
+               if($description) {
+                  echo "<div class='hide post-thumbnail-description'>$description</div>";
                }
             }
          }
       ?>
-   </div>
 </div>
