@@ -36,8 +36,11 @@
                   echo "<div class='hide post-thumbnail-description'>$description</div>";
                }
               echo "<div class='hide post-thumbnail-comment'>";
-              comments_popup_link('add your comment', 'add your comment', 'add your comment');
+               echo '<br/>';
+              $commentsNumber = get_comments_number(); 
+              comments_popup_link('no comments yet (add)', 'one comment so far (add)', $commentsNumber . ' comments (add)');
               echo "</div>";
+
             }
          }
       ?>

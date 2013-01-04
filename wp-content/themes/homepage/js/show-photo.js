@@ -6,7 +6,7 @@ $(document).ready(function() {
       var alink = $('<a></a>').attr('href', url).css('display', 'none');
       var commentLink = listBox.find('.post-thumbnail-comment');
       var description = listBox.find('.post-thumbnail-description');
-      commentLinkA = commentLink.find('a').css('color', '#333333');
+      commentLinkA = commentLink.find('a').addClass('cbox-link-comment');
       alink.attr('title', description.text() +"<br />" + commentLink.html());
       var img = $('<img />').attr('src', url);
       alink.html(img);
