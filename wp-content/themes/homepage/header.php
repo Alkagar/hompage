@@ -21,32 +21,32 @@
         <div class='page'>
             <div class='sidebar'>
                 <div class='sidebar-logo'>
-                    <a href='http://mrowiec.org' class='logo' style="font-size:600%;"></a>
+                    <a href='http://mrowiec.org' title='Alkagar' class='logo' style="font-size:600%;"></a>
                 </div>
                 <div class='navigation'>
                     <ul class='menu-page'>
-                        <li><a href='/home'>home</a></li>
+                        <li><a href='/home' title='Home'>home</a></li>
                         <?php
                             $menu = array('it' => 'blog', 'photo' => 'photo', 'tea' => 'tea', 'portfolio' => 'portfolio');
                             foreach($menu as $name => $link) {
                                 $categoryId = get_cat_ID($name);
                                 $categoryLink = get_category_link($categoryId);
                             ?>
-                            <li><a href='<?php echo $categoryLink; ?>'><?php echo $link; ?></a></li>
+                            <li><a href='<?php echo $categoryLink; ?>' title='<?php echo $name;?>'><?php echo $link; ?></a></li>
                             <?php
                             }
                         ?>
-                        <li><a href='/about'>about</a></li>
+                        <li><a href='/about' title='About me'>about</a></li>
                     </ul>
                     <ul class='menu-social'>
-                        <li><a target='_blank' href='https://www.facebook.com/jakub.mrowiec.5'><img src="<?php bloginfo('stylesheet_directory'); ?>/gfx/f.png" width="16" class='site_social_ico' alt="f" /></a></li>
-                        <li><a target='_blank' href='http://www.flickr.com/photos/alkagar'><img src="<?php bloginfo('stylesheet_directory'); ?>/gfx/fcr.png" width="16" class='site_social_ico' alt="fcr" /></a></li>
-                        <li><a target='_blank' href='https://github.com/alkagar'><img src="<?php bloginfo('stylesheet_directory'); ?>/gfx/gh.png" width="16" class='site_social_ico' alt="gh" /></a></li>
+                        <li><a target='window_facebook' href='https://www.facebook.com/jakub.mrowiec.5'><img src="<?php bloginfo('stylesheet_directory'); ?>/gfx/f.png" width="16" class='site_social_ico' alt="fb" /></a></li>
+                        <li><a target='window_flickr' href='http://www.flickr.com/photos/alkagar'><img src="<?php bloginfo('stylesheet_directory'); ?>/gfx/fcr.png" width="16" class='site_social_ico' alt="flcr" /></a></li>
+                        <li><a target='window_github' href='https://github.com/alkagar'><img src="<?php bloginfo('stylesheet_directory'); ?>/gfx/gh.png" width="16" class='site_social_ico' alt="gh" /></a></li>
                         <li><a href='mailto:jakub [at] mrowiec.org'><img src="<?php bloginfo('stylesheet_directory'); ?>/gfx/mail.png" width="16" class='site_social_ico' alt="@" /></a></li>
                     </ul>
                 </div>
                 <div class='footer'>
-                    <a href='<?php echo wp_login_url(); ?>' class='login'></a>
+                    <a href='<?php echo wp_login_url(); ?>' class='login' title='Login'></a>
                 </div>
             </div>
             <div class='content'>
