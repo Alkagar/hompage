@@ -11,6 +11,7 @@
     <div class='post-content'>
         <?php echo the_content(); ?>
     </div>
+    <div class="clear"></div>
     <div class='post-comments'>
         <?php comments_template(); ?>
     </div>
