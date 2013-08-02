@@ -10,6 +10,9 @@ $(document).ready(function() {
         
         var showThumbnail = 'url("' + thumb_bw + '")';
         var hoverThumbnail = 'url("' + thumb_c + '")';
+        var img = $('<img />').attr('src', thumb_c);
+        $('body').append(img);
+        img.remove();
         thumbnail.css('background-image', showThumbnail);
         thumbnail.hover(function() {
             thumbnail.css('background-image', hoverThumbnail);
