@@ -29,7 +29,7 @@
                 if(in_array($title, array('thumbnail'))) {
                     $bimg = base64_encode(alk_get_attachment_url($attachment->ID));
                     echo "<div class='hide post-thumbnail'>";
-                        echo get_bloginfo('stylesheet_directory') . '/image.php?img=' . $bimg; 
+                        echo get_bloginfo('stylesheet_directory') . '/alk-image.php?img=' . $bimg; 
                         echo "</div>";
                 }
                 if($description) {
