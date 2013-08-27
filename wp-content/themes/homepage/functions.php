@@ -1,4 +1,13 @@
 <?php
+   // includes start
+   function inc($file) {
+      include_once(locate_template( 'Alk_Social_Widget.php', TRUE, TRUE ));
+   }
+   inc($templatePath);
+
+   // includes ends
+
+   // functions definition start
    function alk_get_attachment_url( $id = 0, $size = 'thumbnail', $permalink = false, $icon = false, $text = false ) {
       $id = intval( $id );
       $_post = & get_post( $id );
@@ -23,6 +32,11 @@
 
       return $url;
    }
+   function register_alk_social_widget() {
+      register_widget('Alk_Social_Widget');
+   }
+   // function definition ends
+
    // register sidebars
    if ( function_exists('register_sidebar') ) {
       register_sidebar(array(
@@ -36,3 +50,7 @@
          'after_title'   => '',
       ));
    }
+
+   // hooks start
+   add_action('widgets_init', 'register_alk_social_widget');
+   // hooks ends

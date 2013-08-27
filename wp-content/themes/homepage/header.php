@@ -48,12 +48,6 @@
                         ?>
                         <li><a href='/about' title='About me'>about</a></li>
                     </ul>
-                    <ul class='menu-social'>
-                        <li><a target='window_facebook' href='https://www.facebook.com/jakub.mrowiec.5'><img src="<?php bloginfo('stylesheet_directory'); ?>/gfx/f.png" width="16" class='site_social_ico' alt="fb" /></a></li>
-                        <li><a target='window_flickr' href='http://www.flickr.com/photos/alkagar'><img src="<?php bloginfo('stylesheet_directory'); ?>/gfx/fcr.png" width="16" class='site_social_ico' alt="flcr" /></a></li>
-                        <li><a target='window_github' href='https://github.com/alkagar'><img src="<?php bloginfo('stylesheet_directory'); ?>/gfx/gh.png" width="16" class='site_social_ico' alt="gh" /></a></li>
-                        <li><a href='mailto:jakub [at] mrowiec.org'><img src="<?php bloginfo('stylesheet_directory'); ?>/gfx/mail.png" width="16" class='site_social_ico' alt="@" /></a></li>
-                    </ul>
                    <div>
                       <?php get_sidebar('main');?>
                    </div>
