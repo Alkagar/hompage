@@ -54,6 +54,9 @@
                         <li><a target='window_github' href='https://github.com/alkagar'><img src="<?php bloginfo('stylesheet_directory'); ?>/gfx/gh.png" width="16" class='site_social_ico' alt="gh" /></a></li>
                         <li><a href='mailto:jakub [at] mrowiec.org'><img src="<?php bloginfo('stylesheet_directory'); ?>/gfx/mail.png" width="16" class='site_social_ico' alt="@" /></a></li>
                     </ul>
+                   <div>
+                      <?php get_sidebar('main');?>
+                   </div>
                 </div>
                 <div class='footer'>
                     <a href='<?php echo wp_login_url(); ?>' class='login' title='Login'></a>

@@ -23,3 +23,16 @@
 
       return $url;
    }
+   // register sidebars
+   if ( function_exists('register_sidebar') ) {
+      register_sidebar(array(
+         'name'          => 'main',
+         'id'            => 'main',
+         'description'   => 'main sidebar - left hand side',
+         'class'         => '',
+         'before_widget' => '',
+         'after_widget'  => '',
+         'before_title'  => '',
+         'after_title'   => '',
+      ));
+   }
