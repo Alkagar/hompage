@@ -1,9 +1,5 @@
 <?php
    // includes start
-   function inc($file) {
-      include_once(locate_template( 'Alk_Social_Widget.php', TRUE, TRUE ));
-   }
-   inc($templatePath);
 
    // includes ends
 
@@ -32,9 +28,6 @@
 
       return $url;
    }
-   function register_alk_social_widget() {
-      register_widget('Alk_Social_Widget');
-   }
    // function definition ends
 
    // register sidebars
@@ -52,5 +45,4 @@
    }
 
    // hooks start
-   add_action('widgets_init', 'register_alk_social_widget');
    // hooks ends
