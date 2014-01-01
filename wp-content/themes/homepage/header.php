@@ -16,6 +16,8 @@
         <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/css/colorbox.css" type="text/css" media="screen" />
         <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/css/codecolorer.css" type="text/css" media="screen" />
         <?php comments_popup_script(700, 600); ?>
+
+        <?php wp_head(); ?>
     </head>
     <body>
        <script>
@@ -26,7 +28,6 @@
 
           ga('create', 'UA-42924000-1', 'mrowiec.org');
           ga('send', 'pageview');
-
        </script>
         <div class='page'>
             <div class='sidebar'>
