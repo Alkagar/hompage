@@ -37,21 +37,26 @@ navigation(lipadding)
             &:hover
                 color: _brown
 
+*
+    font-family: 'Raleway', sans-serif !important;
+
 body
     background-color: _black
-    font-family: verdana
+    font-family: 'Raleway', sans-serif !important;
     color: _white
 
 h1 
     font-size: 200%
     padding: 10px 0px
     color: _white - 40%
+    
 
 .page
-    width: {_page_width}px
+    width: unit(_page_width,px)
     margin: 0 auto
 
-.banner
+.
+    display: none
     width: 100%
     height: 225px
     background-color: _brown_dark 
@@ -59,6 +64,7 @@ h1
     background-size: cover
 
 .menu
+    box-shadow: 0px 6px 5px -5px _brown
     width: 100%
     left: 0px
     padding: 25px 0px
@@ -74,9 +80,11 @@ h1
     background-color: _black + 2%
 
     .row
-        margin-bottom: {(_page_width/1)}px 
+        margin-bottom: unit(_page_width/100,px)
         overflow: hidden
+
     .post-box 
+        background-color: _black + 3%
         .post-box-container
             border: 1px solid _brown_dark
             padding: 5px

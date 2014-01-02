@@ -4,6 +4,8 @@
         <meta charset="UTF-8">
         <title>title</title>
         <link rel="stylesheet" href="css/basic.css">
+        <link href='http://fonts.googleapis.com/css?family=Inder&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
     </head>
     <body>
         <div class="page">
