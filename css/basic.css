@@ -424,6 +424,10 @@ h2 {
   font-size: 130%;
   color: #999;
   text-transform: lowercase;
+  padding: 0px 5px;
+}
+a {
+  text-decoration: none;
 }
 .banner {
   display: none;
@@ -434,7 +438,6 @@ h2 {
   background-size: cover;
 }
 .menu {
-  box-shadow: 0px 6px 5px -5px #7f5d3e;
   width: 100%;
   padding: 5px 0px;
   overflow: hidden;
@@ -500,10 +503,10 @@ h2 {
 }
 .content article {
   color: #e6e6e6;
-  padding: 10px;
   line-height: 1.5em;
 }
 .content article p {
+  padding: 10px;
   text-align: justify;
 }
 .content footer {
@@ -523,6 +526,18 @@ h2 {
   margin-left: 0%;
   margin-right: 0%;
   margin: 0px 3px;
+}
+.content header.page p {
+  text-align: right;
+  font-size: 80%;
+  color: #fff;
+  padding: 0px;
+}
+.content header.page h2 {
+  color: #fff;
+}
+.content header.page a {
+  color: #7f5d3e;
 }
 .content .post-box .post-box-container {
   background-color: #080808;
@@ -662,82 +677,82 @@ h2 {
   width: 600px;
 }
 .content .grid-sizer {
-  width: 150px;
-  height: 160px;
+  width: 300px;
+  height: 310px;
 }
 .content .box-1-1 {
-  width: 140px;
+  width: 290px;
   margin: 5px;
 }
 .content .box-1-1 .post-thumbnail {
-  height: 140px;
+  height: 290px;
 }
 .content .box-1-2 {
-  width: 140px;
+  width: 290px;
   margin: 5px;
 }
 .content .box-1-2 .post-thumbnail {
-  height: 300px;
+  height: 600px;
 }
 .content .box-2-1 {
-  width: 290px;
+  width: 590px;
   margin: 5px;
 }
 .content .box-2-1 .post-thumbnail {
-  height: 140px;
+  height: 290px;
 }
 .content .box-2-2 {
-  width: 290px;
+  width: 590px;
   margin: 5px;
 }
 .content .box-2-2 .post-thumbnail {
-  height: 300px;
+  height: 600px;
 }
 .content .grid-sizer {
-  width: 150px;
+  width: 300px;
 }
 .content .post-box {
   margin-bottom: 10px;
 }
 }
-@media all and (min-width: 700px) {
+@media all and (min-width: 750px) {
 .page {
-  width: 700px;
+  width: 750px;
 }
 .content .grid-sizer {
-  width: 140px;
-  height: 150px;
+  width: 250px;
+  height: 260px;
 }
 .content .box-1-1 {
-  width: 130px;
+  width: 240px;
   margin: 5px;
 }
 .content .box-1-1 .post-thumbnail {
-  height: 130px;
+  height: 240px;
 }
 .content .box-1-2 {
-  width: 130px;
+  width: 240px;
   margin: 5px;
 }
 .content .box-1-2 .post-thumbnail {
-  height: 280px;
+  height: 500px;
 }
 .content .box-2-1 {
-  width: 270px;
+  width: 490px;
   margin: 5px;
 }
 .content .box-2-1 .post-thumbnail {
-  height: 130px;
+  height: 240px;
 }
 .content .box-2-2 {
-  width: 270px;
+  width: 490px;
   margin: 5px;
 }
 .content .box-2-2 .post-thumbnail {
-  height: 280px;
+  height: 500px;
 }
 .content .grid-sizer {
-  width: 140px;
+  width: 250px;
 }
 .content .post-box {
   margin-bottom: 10px;
@@ -748,39 +763,39 @@ h2 {
   width: 960px;
 }
 .content .grid-sizer {
-  width: 160px;
-  height: 170px;
+  width: 240px;
+  height: 250px;
 }
 .content .box-1-1 {
-  width: 150px;
+  width: 230px;
   margin: 5px;
 }
 .content .box-1-1 .post-thumbnail {
-  height: 150px;
+  height: 230px;
 }
 .content .box-1-2 {
-  width: 150px;
+  width: 230px;
   margin: 5px;
 }
 .content .box-1-2 .post-thumbnail {
-  height: 320px;
+  height: 480px;
 }
 .content .box-2-1 {
-  width: 310px;
+  width: 470px;
   margin: 5px;
 }
 .content .box-2-1 .post-thumbnail {
-  height: 150px;
+  height: 230px;
 }
 .content .box-2-2 {
-  width: 310px;
+  width: 470px;
   margin: 5px;
 }
 .content .box-2-2 .post-thumbnail {
-  height: 320px;
+  height: 480px;
 }
 .content .grid-sizer {
-  width: 160px;
+  width: 240px;
 }
 .content .post-box {
   margin-bottom: 10px;
@@ -791,7 +806,7 @@ h2 {
   padding: 0px 20px;
 }
 }
-@media all and (min-width: 700px) {
+@media all and (min-width: 750px) {
 .menu ol.navigation {
   float: left;
   display: inline;

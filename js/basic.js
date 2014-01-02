@@ -14,6 +14,15 @@ $(document).ready(function() {
             'background-image' : 'url(' + $(this).data('black') + ')'
         });
     });
+
+    $('footer.post .slider').bxSlider({
+        slideWidth: 200,
+        slideMargin: 0,
+        minSlides: 2,
+        maxSlides: 6,
+        moveSlides: 1,
+        pager: false
+    });
 });
 
 function configureIsotope() {

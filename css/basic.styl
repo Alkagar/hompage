@@ -49,6 +49,10 @@ h2
     font-size:130%
     color: _white - 40%
     text-transform:lowercase
+    padding: 0px 5px
+
+a
+    text-decoration: none
 
 .banner
     display: none
@@ -59,7 +63,6 @@ h2
     background-size: cover
 
 .menu
-    box-shadow: 0px 6px 5px -5px _brown
     width: 100%
     padding: 5px 0px
     overflow: hidden
@@ -97,9 +100,9 @@ h2
     margin-top: 15px
     article
         color: _white - 10%
-        padding:10px
         line-height: 1.5em
         p
+            padding:10px
             text-align:justify
 
     footer
@@ -109,6 +112,20 @@ h2
             .post-box
                 span(1/60)
                 margin: 0px 3px
+
+    header.page
+        p
+            text-align: right
+            font-size: 80%
+            color: _white
+            padding:0px
+        h2 
+            color: _white
+        a
+            color: _brown
+
+
+
         
     .post-box 
         _background=_black + 3%
@@ -142,8 +159,8 @@ h2
 
 
 // ------- media queries for different sizes -----
-_widths = 400 600 700 960
-_cols = 2 4 5 6 
+_widths = 400 600 750 960
+_cols = 2 2 3 4 
 
 _columns = _cols[i]
 
@@ -241,7 +258,7 @@ bp(600px)
             padding: 0px 20px
 endbp()
 
-bp(700px) 
+bp(750px) 
 .menu
     ol.navigation
         span(18/24)
