@@ -16,22 +16,19 @@
                 programmers blog about it adventures, photo and others...
             </h1>
             <div class="menu">
-                <div class="span_24_20">
-                    <ol class='navigation'>
-                        <li><a href="#">[ lorem ]</a></li>
-                        <li><a href="#">[ ipsum ]</a></li>
-                        <li><a href="#">[ dolor ]</a></li>
-                        <li><a href="#">[ sit ]</a></li>
-                        <li><a href="#">[ amet ]</a></li>
-                    </ol>
-                </div>
-                <div class="span_24_4 align-right">
-                    <ol class='social'>
-                        <li><a href="#">ico</a></li>
-                        <li><a href="#">ico</a></li>
-                        <li><a href="#">ico</a></li>
-                    </ol>
-                </div>
+                <ol class='social'>
+                    <li><a href="#"><img class='social-ico' src='gfx/social-ico/f.png' /></a></li>
+                    <li><a href="#"><img class='social-ico' src='gfx/social-ico/gh.png' /></a></li>
+                    <li><a href="#"><img class='social-ico' src='gfx/social-ico/fcr.png' /></a></li>
+                    <li><a href="#"><img class='social-ico' src='gfx/social-ico/mail.png' /></a></li>
+                </ol>
+                <ol class='navigation'>
+                    <li><a href="#">[ home ]</a></li>
+                    <li><a href="#">[ photo ]</a></li>
+                    <li><a href="#">[ it blog ]</a></li>
+                    <li><a href="#">[ portfolio ]</a></li>
+                    <li><a href="#">[ about ]</a></li>
+                </ol>
             </div>
             <div class="banner"></div>
             <div class="content">

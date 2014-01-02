@@ -2,11 +2,11 @@
 @import index
 
 // ----- grid configuration ---------------
-for n in (1..24) 
-    .span_24_{n}
-        span(n/24)
-    .col_24_{n}
-        col(n/24)
+//for n in (1..24) 
+//    .span_24_{n}
+//        span(n/24)
+//    .col_24_{n}
+//        col(n/24)
 
 
 // ----- basic colors ---------------------
@@ -29,37 +29,19 @@ opacity(r,g,b,a)
     -ms-filter: unquote('"progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)"')
 
 navigation(lipadding)
-    &
-        margin: 0px
-        padding: 0px
-        list-style: none
-    & li 
-        display: inline
-        padding: lipadding
-        margin: 5px
-        & a
-            color: _white - 60%   
-            text-decoration: none
-            &:hover
-                color: _brown
 
 *
     font-family: 'Raleway', sans-serif !important;
 
-html
-    overflow:scroll
 body
     background-color: _black
     font-family: 'Raleway', sans-serif !important;
     color: _white
 
-.page
-    width: unit(_page_width,px)
-    margin: 0 auto
-
 h1 
-    font-size: 200%
-    padding: 10px 0px
+    font-size: 150%
+    padding: 10px 0px 5px 10px
+    //padding: 10px 0px
     color: _white - 40%
 
 .banner
@@ -73,17 +55,39 @@ h1
 .menu
     box-shadow: 0px 6px 5px -5px _brown
     width: 100%
-    left: 0px
-    padding: 25px 0px
+    padding: 5px 0px
+    overflow: hidden
+    ol.inline-menu
+        col(1/1)
+        margin: 0px
+        padding: 0px
+        list-style: none
+        display: block
+        li 
+            display: inline
+            margin: 0px
+            a
+                color: _white - 60%   
+                text-decoration: none
+            a:hover
+                color: _brown
     ol.navigation
-        navigation(10px 40px)
+        @extend .menu ol.inline-menu
+        li
+            padding: 0px 3px
+        li:first-child
+            padding-left: 5px
     ol.social
-        navigation(10px 5px)
-
+        @extend .menu ol.inline-menu
+        margin-top: 10px
+        li
+            padding: 0px 5px
+            img.social-ico
+                width: 16px
+                height: 16px
 
 .content
     width: 100%
-    min-height: 400px
     margin-top: 15px
     background-color: _black + 2%
     .post-box 
@@ -105,10 +109,9 @@ h1
         .post-thumbnail
             cursor:pointer
             width: 100%
-            background-color: red
-            background-image: url(../gfx/thumb-1.png)
+            background-color: _background
             background-size: cover
-
+            background-image: url(../gfx/thumb-1.png)
 
 // ------- commons -------------------------
 .align-left
@@ -117,14 +120,17 @@ h1
 .align-right
     text-align: right
 
+
+// ------- media queries for different sizes -----
 _widths = 400 600 700 960
 _cols = 2 4 5 6 
 
 _columns = _cols[i]
 
-_page_width = 399
+_page_width = 300 
 .page 
     width: unit(_page_width, px)
+    margin: 0 auto
 .content
     _padding = 10
     _margin = _padding/2
@@ -203,3 +209,34 @@ for _page_width, i in _widths
         .post-box 
             margin-bottom: unit(_padding, px)
     endbp()
+
+
+bp(600px)
+.menu
+    ol.navigation
+        li
+            padding: 0px 20px
+endbp()
+
+bp(700px) 
+.menu
+    ol.navigation
+        span(18/24)
+        shift(-6/24)
+    ol.social
+        span(6/24)
+        shift(18/24)
+        margin-top: 0px
+        text-align:right
+        li
+            padding: 0px 10px
+h1
+    font-size: 200%
+endbp()
+
+bp(960px) 
+.menu
+    ol.navigation
+        li
+            padding: 0px 35px
+endbp()
