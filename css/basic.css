@@ -1185,21 +1185,24 @@ header h6 ~ p {
 * {
   font-family: 'Raleway', sans-serif !important;
 }
+html {
+  overflow: scroll;
+}
 body {
   background-color: #000;
   font-family: 'Raleway', sans-serif !important;
   color: #fff;
+}
+.page {
+  width: 960px;
+  margin: 0 auto;
 }
 h1 {
   font-size: 200%;
   padding: 10px 0px;
   color: #999;
 }
-.page {
-  width: 960px;
-  margin: 0 auto;
-}
-. {
+.banner {
   display: none;
   width: 100%;
   height: 225px;
@@ -1253,48 +1256,275 @@ h1 {
   margin-top: 15px;
   background-color: #050505;
 }
-.content .row {
-  margin-bottom: 9.6px;
-  overflow: hidden;
-}
 .content .post-box {
   background-color: #080808;
 }
 .content .post-box .post-box-container {
   border: 1px solid #261c13;
   padding: 5px;
-  padding-bottom: 0px;
 }
 .content .post-box .post-title {
-  padding: 5px 0px;
-  height: 2.5em;
+/* Fallback for web browsers that doesn't support RGBa */
+  background: #000;
+/* RGBa with opacity */
+  background: rgba(0,0,0,0.5);
+/* For IE 5.5 - 7*/
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+/* For IE 8*/
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+  padding: 5px;
   color: #ccc;
 }
-.content .post-box .post-tags,
-.content .post-box .post-date {
+.content .post-box .post-meta {
+  display: none;
+  width: 98%;
   color: #59412b;
   font-size: 90%;
-  margin: 0px -5px;
-  padding-left: 5px;
   font-style: italic;
-  background-color: #0a0a0a;
-}
-.content .post-box .post-date {
-  margin-top: 5px;
 }
 .content .post-box .post-thumbnail {
+  cursor: pointer;
   width: 100%;
-  height: 220px;
   background-color: #b44326;
   background-image: url("../gfx/thumb-1.png");
   background-size: cover;
-}
-.content .post-box:nth-child(even) .post-thumbnail {
-  background-image: url("../gfx/thumb-2.png");
 }
 .align-left {
   text-align: left;
 }
 .align-right {
   text-align: right;
+}
+.page {
+  width: 399px;
+}
+.content .grid-sizer {
+  width: 199.5px;
+  height: 209.5px;
+}
+.content .box-1-1 {
+  width: 189.5px;
+  height: 189.5px;
+  margin: 5px;
+}
+.content .box-1-1 .post-thumbnail {
+  height: 189.5px;
+}
+.content .box-1-2 {
+  width: 189.5px;
+  height: 399px;
+  margin: 5px;
+}
+.content .box-1-2 .post-thumbnail {
+  height: 399px;
+}
+.content .box-2-1 {
+  width: 389px;
+  height: 189.5px;
+  margin: 5px;
+}
+.content .box-2-1 .post-thumbnail {
+  height: 189.5px;
+}
+.content .box-2-2 {
+  width: 389px;
+  height: 399px;
+  margin: 5px;
+}
+.content .box-2-2 .post-thumbnail {
+  height: 399px;
+}
+.content .grid-sizer {
+  width: 199.5px;
+}
+.content .post-box {
+  margin-bottom: 10px;
+}
+@media all and (min-width: 400px) {
+.page {
+  width: 400px;
+}
+.content .grid-sizer {
+  width: 200px;
+  height: 210px;
+}
+.content .box-1-1 {
+  width: 190px;
+  height: 190px;
+  margin: 5px;
+}
+.content .box-1-1 .post-thumbnail {
+  height: 190px;
+}
+.content .box-1-2 {
+  width: 190px;
+  height: 400px;
+  margin: 5px;
+}
+.content .box-1-2 .post-thumbnail {
+  height: 400px;
+}
+.content .box-2-1 {
+  width: 390px;
+  height: 190px;
+  margin: 5px;
+}
+.content .box-2-1 .post-thumbnail {
+  height: 190px;
+}
+.content .box-2-2 {
+  width: 390px;
+  height: 400px;
+  margin: 5px;
+}
+.content .box-2-2 .post-thumbnail {
+  height: 400px;
+}
+.content .grid-sizer {
+  width: 200px;
+}
+.content .post-box {
+  margin-bottom: 10px;
+}
+}
+@media all and (min-width: 600px) {
+.page {
+  width: 600px;
+}
+.content .grid-sizer {
+  width: 150px;
+  height: 160px;
+}
+.content .box-1-1 {
+  width: 140px;
+  height: 140px;
+  margin: 5px;
+}
+.content .box-1-1 .post-thumbnail {
+  height: 140px;
+}
+.content .box-1-2 {
+  width: 140px;
+  height: 300px;
+  margin: 5px;
+}
+.content .box-1-2 .post-thumbnail {
+  height: 300px;
+}
+.content .box-2-1 {
+  width: 290px;
+  height: 140px;
+  margin: 5px;
+}
+.content .box-2-1 .post-thumbnail {
+  height: 140px;
+}
+.content .box-2-2 {
+  width: 290px;
+  height: 300px;
+  margin: 5px;
+}
+.content .box-2-2 .post-thumbnail {
+  height: 300px;
+}
+.content .grid-sizer {
+  width: 150px;
+}
+.content .post-box {
+  margin-bottom: 10px;
+}
+}
+@media all and (min-width: 700px) {
+.page {
+  width: 700px;
+}
+.content .grid-sizer {
+  width: 140px;
+  height: 150px;
+}
+.content .box-1-1 {
+  width: 130px;
+  height: 130px;
+  margin: 5px;
+}
+.content .box-1-1 .post-thumbnail {
+  height: 130px;
+}
+.content .box-1-2 {
+  width: 130px;
+  height: 280px;
+  margin: 5px;
+}
+.content .box-1-2 .post-thumbnail {
+  height: 280px;
+}
+.content .box-2-1 {
+  width: 270px;
+  height: 130px;
+  margin: 5px;
+}
+.content .box-2-1 .post-thumbnail {
+  height: 130px;
+}
+.content .box-2-2 {
+  width: 270px;
+  height: 280px;
+  margin: 5px;
+}
+.content .box-2-2 .post-thumbnail {
+  height: 280px;
+}
+.content .grid-sizer {
+  width: 140px;
+}
+.content .post-box {
+  margin-bottom: 10px;
+}
+}
+@media all and (min-width: 960px) {
+.page {
+  width: 960px;
+}
+.content .grid-sizer {
+  width: 160px;
+  height: 170px;
+}
+.content .box-1-1 {
+  width: 150px;
+  height: 150px;
+  margin: 5px;
+}
+.content .box-1-1 .post-thumbnail {
+  height: 150px;
+}
+.content .box-1-2 {
+  width: 150px;
+  height: 320px;
+  margin: 5px;
+}
+.content .box-1-2 .post-thumbnail {
+  height: 320px;
+}
+.content .box-2-1 {
+  width: 310px;
+  height: 150px;
+  margin: 5px;
+}
+.content .box-2-1 .post-thumbnail {
+  height: 150px;
+}
+.content .box-2-2 {
+  width: 310px;
+  height: 320px;
+  margin: 5px;
+}
+.content .box-2-2 .post-thumbnail {
+  height: 320px;
+}
+.content .grid-sizer {
+  width: 160px;
+}
+.content .post-box {
+  margin-bottom: 10px;
+}
 }

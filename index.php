@@ -4,7 +4,10 @@
         <meta charset="UTF-8">
         <title>title</title>
         <link rel="stylesheet" href="css/basic.css">
-        <link href='http://fonts.googleapis.com/css?family=Inder&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+        <script src="js/jquery.isotope.min.js"></script>
+        <script src="js/jquery.isotope.perfectmasonry.js"></script> 
+        <script src="js/basic.js"></script>
         <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
     </head>
     <body>
@@ -32,92 +35,241 @@
             </div>
             <div class="banner"></div>
             <div class="content">
-                <div class="row">
-                    <div class="col_24_6 post-box">
-                        <div class="post-box-container">
-                            <div class="post-thumbnail"></div>
-                            <div class="post-title">Lorem Ipsum dolor sit amet, Lorem ipsum dolor sit amet</div>
-                            <div class="post-date">on 20/12/2015</div>
-                            <div class="post-tags">tags: Lorem, Ipsum, Amet, Sit</div>
-                        </div>
-                    </div>
-                    <div class="col_24_12 post-box">
-                        <div class="post-box-container">
-                            <div class="post-thumbnail"></div>
-                            <div class="post-title">Sit</div>
-                            <div class="post-date">on 20/12/2015</div>
-                            <div class="post-tags">tags: Lorem, Ipsum, Amet, Sit</div>
-                        </div>
-                    </div>
-                    <div class="col_24_6 post-box">
-                        <div class="post-box-container">
-                            <div class="post-thumbnail"></div>
-                            <div class="post-title">Sit</div>
-                            <div class="post-date">on 20/12/2015</div>
-                            <div class="post-tags">tags: Lorem, Ipsum, Amet, Sit</div>
+                <div class="box-2-1 post-box">
+                    <div class="post-box-container">
+                        <div class="post-thumbnail">
+                            <div class="post-title">
+                                Lorem Ipsum dolor sit amet, Lorem ipsum dolor sit amet
+                                <div class="post-meta">
+                                    <div class="post-date"> on <span class='sort-date'>10/12/2008</span></div>
+                                    <div class="post-tags">tags: Lorem, Ipsum, Amet, Sit</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col_24_6 post-box">
-                        <div class="post-box-container">
-                            <div class="post-thumbnail"></div>
-                            <div class="post-title">Lorem Ipsum dolor sit amet, Lorem ipsum dolor sit amet</div>
-                            <div class="post-date">on 20/12/2015</div>
-                            <div class="post-tags">tags: Lorem, Ipsum, Amet, Sit</div>
-                        </div>
-                    </div>
-                    <div class="col_24_6 post-box">
-                        <div class="post-box-container">
-                            <div class="post-thumbnail"></div>
-                            <div class="post-title">Sit</div>
-                            <div class="post-date">on 20/12/2015</div>
-                            <div class="post-tags">tags: Lorem, Ipsum, Amet, Sit</div>
-                        </div>
-                    </div>
-                    <div class="col_24_6 post-box">
-                        <div class="post-box-container">
-                            <div class="post-thumbnail"></div>
-                            <div class="post-title">Sit</div>
-                            <div class="post-date">on 20/12/2015</div>
-                            <div class="post-tags">tags: Lorem, Ipsum, Amet, Sit</div>
-                        </div>
-                    </div>
-                    <div class="col_24_6 post-box">
-                        <div class="post-box-container">
-                            <div class="post-thumbnail"></div>
-                            <div class="post-title">Sit</div>
-                            <div class="post-date">on 20/12/2015</div>
-                            <div class="post-tags">tags: Lorem, Ipsum, Amet, Sit</div>
+                <div class="box-1-1 post-box">
+                    <div class="post-box-container">
+                        <div class="post-thumbnail">
+                            <div class="post-title">
+                                Lorem Ipsum dolor sit amet, Lorem ipsum dolor sit amet
+                                <div class="post-meta">
+                                    <div class="post-date"> on <span class='sort-date'>10/12/2008</span></div>
+                                    <div class="post-tags">tags: Lorem, Ipsum, Amet, Sit</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col_24_12 post-box">
-                        <div class="post-box-container">
-                            <div class="post-thumbnail"></div>
-                            <div class="post-title">Sit</div>
-                            <div class="post-date">on 20/12/2015</div>
-                            <div class="post-tags">tags: Lorem, Ipsum, Amet, Sit</div>
-                        </div>
-                    </div>
-                    <div class="col_24_6 post-box">
-                        <div class="post-box-container">
-                            <div class="post-thumbnail"></div>
-                            <div class="post-title">Lorem Ipsum dolor sit amet, Lorem ipsum dolor sit amet</div>
-                            <div class="post-date">on 20/12/2015</div>
-                            <div class="post-tags">tags: Lorem, Ipsum, Amet, Sit</div>
-                        </div>
-                    </div>
-                    <div class="col_24_6 post-box">
-                        <div class="post-box-container">
-                            <div class="post-thumbnail"></div>
-                            <div class="post-title">Sit</div>
-                            <div class="post-date">on 20/12/2015</div>
-                            <div class="post-tags">tags: Lorem, Ipsum, Amet, Sit</div>
+                <div class="box-2-1 post-box">
+                    <div class="post-box-container">
+                        <div class="post-thumbnail">
+                            <div class="post-title">
+                                Lorem Ipsum dolor sit amet, Lorem ipsum dolor sit amet
+                                <div class="post-meta">
+                                    <div class="post-date"> on <span class='sort-date'>10/12/2008</span></div>
+                                    <div class="post-tags">tags: Lorem, Ipsum, Amet, Sit</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
+                <div class="box-2-2 post-box">
+                    <div class="post-box-container">
+                        <div class="post-thumbnail">
+                            <div class="post-title">
+                                Lorem Ipsum dolor sit amet, Lorem ipsum dolor sit amet
+                                <div class="post-meta">
+                                    <div class="post-date"> on <span class='sort-date'>10/12/2008</span></div>
+                                    <div class="post-tags">tags: Lorem, Ipsum, Amet, Sit</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box-1-1 post-box">
+                    <div class="post-box-container">
+                        <div class="post-thumbnail">
+                            <div class="post-title">
+                                Lorem Ipsum dolor sit amet, Lorem ipsum dolor sit amet
+                                <div class="post-meta">
+                                    <div class="post-date"> on <span class='sort-date'>10/12/2008</span></div>
+                                    <div class="post-tags">tags: Lorem, Ipsum, Amet, Sit</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box-2-1 post-box">
+                    <div class="post-box-container">
+                        <div class="post-thumbnail">
+                            <div class="post-title">
+                                Lorem Ipsum dolor sit amet, Lorem ipsum dolor sit amet
+                                <div class="post-meta">
+                                    <div class="post-date"> on <span class='sort-date'>10/12/2008</span></div>
+                                    <div class="post-tags">tags: Lorem, Ipsum, Amet, Sit</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box-1-1 post-box">
+                    <div class="post-box-container">
+                        <div class="post-thumbnail">
+                            <div class="post-title">
+                                Lorem Ipsum dolor sit amet, Lorem ipsum dolor sit amet
+                                <div class="post-meta">
+                                    <div class="post-date"> on <span class='sort-date'>10/12/2008</span></div>
+                                    <div class="post-tags">tags: Lorem, Ipsum, Amet, Sit</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box-2-1 post-box">
+                    <div class="post-box-container">
+                        <div class="post-thumbnail">
+                            <div class="post-title">
+                                Lorem Ipsum dolor sit amet, Lorem ipsum dolor sit amet
+                                <div class="post-meta">
+                                    <div class="post-date"> on <span class='sort-date'>10/12/2008</span></div>
+                                    <div class="post-tags">tags: Lorem, Ipsum, Amet, Sit</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box-2-1 post-box">
+                    <div class="post-box-container">
+                        <div class="post-thumbnail">
+                            <div class="post-title">
+                                Lorem Ipsum dolor sit amet, Lorem ipsum dolor sit amet
+                                <div class="post-meta">
+                                    <div class="post-date"> on <span class='sort-date'>10/12/2008</span></div>
+                                    <div class="post-tags">tags: Lorem, Ipsum, Amet, Sit</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box-1-1 post-box">
+                    <div class="post-box-container">
+                        <div class="post-thumbnail">
+                            <div class="post-title">
+                                Lorem Ipsum dolor sit amet, Lorem ipsum dolor sit amet
+                                <div class="post-meta">
+                                    <div class="post-date"> on <span class='sort-date'>10/12/2008</span></div>
+                                    <div class="post-tags">tags: Lorem, Ipsum, Amet, Sit</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box-2-1 post-box">
+                    <div class="post-box-container">
+                        <div class="post-thumbnail">
+                            <div class="post-title">
+                                Lorem Ipsum dolor sit amet, Lorem ipsum dolor sit amet
+                                <div class="post-meta">
+                                    <div class="post-date"> on <span class='sort-date'>10/12/2008</span></div>
+                                    <div class="post-tags">tags: Lorem, Ipsum, Amet, Sit</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box-1-1 post-box">
+                    <div class="post-box-container">
+                        <div class="post-thumbnail">
+                            <div class="post-title">
+                                Lorem Ipsum dolor sit amet, Lorem ipsum dolor sit amet
+                                <div class="post-meta">
+                                    <div class="post-date"> on <span class='sort-date'>10/12/2008</span></div>
+                                    <div class="post-tags">tags: Lorem, Ipsum, Amet, Sit</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box-2-1 post-box">
+                    <div class="post-box-container">
+                        <div class="post-thumbnail">
+                            <div class="post-title">
+                                Lorem Ipsum dolor sit amet, Lorem ipsum dolor sit amet
+                                <div class="post-meta">
+                                    <div class="post-date"> on <span class='sort-date'>10/12/2008</span></div>
+                                    <div class="post-tags">tags: Lorem, Ipsum, Amet, Sit</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box-1-1 post-box">
+                    <div class="post-box-container">
+                        <div class="post-thumbnail">
+                            <div class="post-title">
+                                Lorem Ipsum dolor sit amet, Lorem ipsum dolor sit amet
+                                <div class="post-meta">
+                                    <div class="post-date"> on <span class='sort-date'>10/12/2008</span></div>
+                                    <div class="post-tags">tags: Lorem, Ipsum, Amet, Sit</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box-1-2 post-box">
+                    <div class="post-box-container">
+                        <div class="post-thumbnail">
+                            <div class="post-title">
+                                Lorem Ipsum dolor sit amet, Lorem ipsum dolor sit amet
+                                <div class="post-meta">
+                                    <div class="post-date"> on <span class='sort-date'>10/12/2008</span></div>
+                                    <div class="post-tags">tags: Lorem, Ipsum, Amet, Sit</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box-1-1 post-box">
+                    <div class="post-box-container">
+                        <div class="post-thumbnail">
+                            <div class="post-title">
+                                Lorem Ipsum dolor sit amet, Lorem ipsum dolor sit amet
+                                <div class="post-meta">
+                                    <div class="post-date"> on <span class='sort-date'>10/12/2008</span></div>
+                                    <div class="post-tags">tags: Lorem, Ipsum, Amet, Sit</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box-1-1 post-box">
+                    <div class="post-box-container">
+                        <div class="post-thumbnail">
+                            <div class="post-title">
+                                Lorem Ipsum dolor sit amet, Lorem ipsum dolor sit amet
+                                <div class="post-meta">
+                                    <div class="post-date"> on <span class='sort-date'>10/12/2008</span></div>
+                                    <div class="post-tags">tags: Lorem, Ipsum, Amet, Sit</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box-2-1 post-box">
+                    <div class="post-box-container">
+                        <div class="post-thumbnail">
+                            <div class="post-title">
+                                Lorem Ipsum dolor sit amet, Lorem ipsum dolor sit amet
+                                <div class="post-meta">
+                                    <div class="post-date"> on <span class='sort-date'>10/12/2008</span></div>
+                                    <div class="post-tags">tags: Lorem, Ipsum, Amet, Sit</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-sizer"></div>
             </div>
         </div>
     </body>

@@ -16,11 +16,17 @@ _brown = #7F5D3E
 _brown_dark = _brown - 70%
 _brown_middle = _brown - 30%
 
-
 _page_width = 960
 
-
-
+opacity(r,g,b,a)
+    /* Fallback for web browsers that doesn't support RGBa */
+    background: rgb(r, g, b);
+    /* RGBa with opacity */
+    background: rgba(r, g, b, a);
+    /* For IE 5.5 - 7*/
+    filter:unquote('progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)')
+    /* For IE 8*/
+    -ms-filter: unquote('"progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)"')
 
 navigation(lipadding)
     &
@@ -40,22 +46,23 @@ navigation(lipadding)
 *
     font-family: 'Raleway', sans-serif !important;
 
+html
+    overflow:scroll
 body
     background-color: _black
     font-family: 'Raleway', sans-serif !important;
     color: _white
 
-h1 
-    font-size: 200%
-    padding: 10px 0px
-    color: _white - 40%
-    
-
 .page
     width: unit(_page_width,px)
     margin: 0 auto
 
-.
+h1 
+    font-size: 200%
+    padding: 10px 0px
+    color: _white - 40%
+
+.banner
     display: none
     width: 100%
     height: 225px
@@ -73,49 +80,126 @@ h1
     ol.social
         navigation(10px 5px)
 
+
 .content
     width: 100%
     min-height: 400px
     margin-top: 15px
     background-color: _black + 2%
-
-    .row
-        margin-bottom: unit(_page_width/100,px)
-        overflow: hidden
-
     .post-box 
-        background-color: _black + 3%
+        _background=_black + 3%
+        background-color: _background
         .post-box-container
             border: 1px solid _brown_dark
             padding: 5px
-            padding-bottom: 0px
         .post-title 
-            padding: 5px 0px
-            height: 2.5em
+            opacity(0,0,0,0.5)
+            padding: 5px
             color: _white - 20%
-        .post-tags
-        .post-date 
+        .post-meta
+            display:none;
+            width: 98%
             color: _brown_middle
             font-size: 90%
-            margin: 0px -5px
-            padding-left: 5px
             font-style: italic
-            background-color: _black + 4%
-        .post-date
-            margin-top: 5px
         .post-thumbnail
+            cursor:pointer
             width: 100%
-            height: 220px
             background-color: red
             background-image: url(../gfx/thumb-1.png)
             background-size: cover
-    .post-box:nth-child(even)
-        .post-thumbnail
-            background-image: url(../gfx/thumb-2.png)
 
+
+// ------- commons -------------------------
 .align-left
     text-align: left
 
 .align-right
     text-align: right
 
+_widths = 400 600 700 960
+_cols = 2 4 5 6 
+
+_columns = _cols[i]
+
+_page_width = 399
+.page 
+    width: unit(_page_width, px)
+.content
+    _padding = 10
+    _margin = _padding/2
+    _columns = 2
+    _size = _page_width/_columns - _padding
+    .grid-sizer
+        width: unit(_size, px) + _padding
+        height: unit(_size, px) + _padding*2
+    .box-1-1 
+        width: unit(_size, px)
+        height: unit(_size, px)
+        margin: unit(_margin, px)
+        .post-thumbnail
+            height: unit(_size, px)
+    .box-1-2
+        width: unit(_size, px)
+        height: unit((_size*2) + _padding*2, px)
+        margin: unit(_margin, px)
+        .post-thumbnail
+            height: unit((_size*2) + _padding*2, px)
+    .box-2-1
+        width: unit((_size*2) + _padding, px)
+        height: unit(_size, px)
+        margin: unit(_margin, px)
+        .post-thumbnail
+            height: unit(_size, px)
+    .box-2-2
+        width: unit((_size*2) + _padding, px)
+        height: unit((_size*2) + _padding*2, px)
+        margin: unit(_margin, px)
+        .post-thumbnail
+            height: unit((_size*2) + _padding*2, px)
+    .grid-sizer 
+        width: unit((_page_width/_columns), px)
+    .post-box 
+        margin-bottom: unit(_padding, px)
+
+for _page_width, i in _widths
+    _columns = _cols[i]
+    bp(unit(_page_width, px)) 
+    .page 
+        width: unit(_page_width, px)
+    .content
+        _padding = 10
+        _margin = _padding/2
+        _size = _page_width/_columns - _padding
+        .grid-sizer
+            width: unit(_size, px) + _padding
+            height: unit(_size, px) + _padding*2
+        .box-1-1 
+            width: unit(_size, px)
+            height: unit(_size, px)
+            margin: unit(_margin, px)
+            .post-thumbnail
+                height: unit(_size, px)
+        .box-1-2
+            width: unit(_size, px)
+            height: unit((_size*2) + _padding*2, px)
+            margin: unit(_margin, px)
+            .post-thumbnail
+                height: unit((_size*2) + _padding*2, px)
+        .box-2-1
+            width: unit((_size*2) + _padding, px)
+            height: unit(_size, px)
+            margin: unit(_margin, px)
+            .post-thumbnail
+                height: unit(_size, px)
+        .box-2-2
+            width: unit((_size*2) + _padding, px)
+            height: unit((_size*2) + _padding*2, px)
+            margin: unit(_margin, px)
+            .post-thumbnail
+                height: unit((_size*2) + _padding*2, px)
+        .grid-sizer 
+            width: unit((_page_width/_columns), px)
+        .post-box 
+            margin-bottom: unit(_padding, px)
+    endbp()
