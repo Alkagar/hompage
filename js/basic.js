@@ -3,10 +3,21 @@ $(document).ready(function() {
 
     $('.post-thumbnail').mouseover(function() {$(this).find('.post-meta').show();});
     $('.post-thumbnail').mouseout(function() {$(this).find('.post-meta').hide();});
+
+    $('.post-thumbnail').mouseover(function() {
+        $(this).css({
+            'background-image' : 'url(' + $(this).data('color') + ')'
+        });
+    });
+    $('.post-thumbnail').mouseout(function() {
+        $(this).css({
+            'background-image' : 'url(' + $(this).data('black') + ')'
+        });
+    });
 });
 
 function configureIsotope() {
-    var container = $('.content');
+    var container = $('.isotope');
     container.isotope(isotopeGetArgs());
 
     $(window).resize(function() {

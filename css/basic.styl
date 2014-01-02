@@ -43,6 +43,12 @@ h1
     padding: 10px 0px 5px 10px
     //padding: 10px 0px
     color: _white - 40%
+    text-transform:lowercase
+
+h2 
+    font-size:130%
+    color: _white - 40%
+    text-transform:lowercase
 
 .banner
     display: none
@@ -89,11 +95,25 @@ h1
 .content
     width: 100%
     margin-top: 15px
-    background-color: _black + 2%
+    article
+        color: _white - 10%
+        padding:10px
+        line-height: 1.5em
+        p
+            text-align:justify
+
+    footer
+        overflow: hidden
+        .slider
+            width: 9600px
+            .post-box
+                span(1/60)
+                margin: 0px 3px
+        
     .post-box 
         _background=_black + 3%
-        background-color: _background
         .post-box-container
+            background-color: _background
             border: 1px solid _brown_dark
             padding: 5px
         .post-title 
@@ -131,6 +151,18 @@ _page_width = 300
 .page 
     width: unit(_page_width, px)
     margin: 0 auto
+
+    footer.post
+        width:100%
+        padding: 16px 0px
+
+    footer.page
+        border-top: 1px solid _white - 40%
+        text-align: right
+        padding: 0px 0px
+        margin-top: 10px 
+        color: _brown
+        font-size: 80%
 .content
     _padding = 10
     _margin = _padding/2
@@ -141,26 +173,21 @@ _page_width = 300
         height: unit(_size, px) + _padding*2
     .box-1-1 
         width: unit(_size, px)
-        height: unit(_size, px)
         margin: unit(_margin, px)
         .post-thumbnail
             height: unit(_size, px)
     .box-1-2
         width: unit(_size, px)
-        height: unit((_size*2) + _padding*2, px)
         margin: unit(_margin, px)
         .post-thumbnail
             height: unit((_size*2) + _padding*2, px)
     .box-2-1
         width: unit((_size*2) + _padding, px)
-        height: unit(_size, px)
         margin: unit(_margin, px)
         .post-thumbnail
             height: unit(_size, px)
     .box-2-2
         width: unit((_size*2) + _padding, px)
-        height: unit((_size*2) + _padding*2, px)
-        margin: unit(_margin, px)
         .post-thumbnail
             height: unit((_size*2) + _padding*2, px)
     .grid-sizer 
@@ -182,25 +209,21 @@ for _page_width, i in _widths
             height: unit(_size, px) + _padding*2
         .box-1-1 
             width: unit(_size, px)
-            height: unit(_size, px)
             margin: unit(_margin, px)
             .post-thumbnail
                 height: unit(_size, px)
         .box-1-2
             width: unit(_size, px)
-            height: unit((_size*2) + _padding*2, px)
             margin: unit(_margin, px)
             .post-thumbnail
                 height: unit((_size*2) + _padding*2, px)
         .box-2-1
             width: unit((_size*2) + _padding, px)
-            height: unit(_size, px)
             margin: unit(_margin, px)
             .post-thumbnail
                 height: unit(_size, px)
         .box-2-2
             width: unit((_size*2) + _padding, px)
-            height: unit((_size*2) + _padding*2, px)
             margin: unit(_margin, px)
             .post-thumbnail
                 height: unit((_size*2) + _padding*2, px)
@@ -232,6 +255,12 @@ bp(700px)
             padding: 0px 10px
 h1
     font-size: 200%
+h2
+    font-size: 150%
+.content
+    article
+        p
+            font-size: 120%
 endbp()
 
 bp(960px) 
