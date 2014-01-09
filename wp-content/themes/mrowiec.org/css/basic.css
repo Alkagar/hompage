@@ -3,8 +3,7 @@ body,
 .browsehappy p,
 .menu ol.inline-menu,
 .menu ol.navigation,
-.menu ol.social,
-.content footer .slider .post-box {
+.menu ol.social {
   *zoom: 1;
 }
 body:before,
@@ -13,14 +12,12 @@ body:before,
 .menu ol.inline-menu:before,
 .menu ol.navigation:before,
 .menu ol.social:before,
-.content footer .slider .post-box:before,
 body:after,
 .cf:after,
 .browsehappy p:after,
 .menu ol.inline-menu:after,
 .menu ol.navigation:after,
-.menu ol.social:after,
-.content footer .slider .post-box:after {
+.menu ol.social:after {
   content: '';
   display: table;
 }
@@ -29,8 +26,7 @@ body:after,
 .browsehappy p:after,
 .menu ol.inline-menu:after,
 .menu ol.navigation:after,
-.menu ol.social:after,
-.content footer .slider .post-box:after {
+.menu ol.social:after {
   clear: both;
 }
 article,
@@ -509,23 +505,8 @@ a {
   padding: 10px;
   text-align: justify;
 }
-.content footer {
-  overflow: hidden;
-}
-.content footer .slider {
-  width: 9600px;
-}
-.content footer .slider .post-box {
-  float: left;
-  display: inline;
-  clear: none;
-  padding-left: 0;
-  padding-right: 0;
-  text-align: inherit;
-  width: 1.6666666666666667%;
-  margin-left: 0%;
-  margin-right: 0%;
-  margin: 0px 3px;
+.content footer.post {
+  display: none;
 }
 .content header.page p {
   text-align: right;
@@ -538,6 +519,9 @@ a {
 }
 .content header.page a {
   color: #7f5d3e;
+}
+.content .post-box a {
+  color: #ccc;
 }
 .content .post-box .post-box-container {
   background-color: #080808;
@@ -559,9 +543,14 @@ a {
 .content .post-box .post-meta {
   display: none;
   width: 98%;
-  color: #59412b;
-  font-size: 90%;
-  font-style: italic;
+  color: #999;
+  font-size: 80%;
+}
+.content .post-box .post-meta .post-long-description {
+  display: none;
+}
+.content .post-box .post-meta a {
+  text-decoration: underline;
 }
 .content .post-box .post-thumbnail {
   cursor: pointer;
@@ -579,10 +568,6 @@ a {
 .page {
   width: 300px;
   margin: 0 auto;
-}
-.page footer.post {
-  width: 100%;
-  padding: 16px 0px;
 }
 .page footer.page {
   border-top: 1px solid #999;
@@ -672,87 +657,87 @@ a {
   margin-bottom: 10px;
 }
 }
-@media all and (min-width: 600px) {
+@media all and (min-width: 480px) {
 .page {
-  width: 600px;
+  width: 480px;
 }
 .content .grid-sizer {
-  width: 300px;
-  height: 310px;
+  width: 240px;
+  height: 250px;
 }
 .content .box-1-1 {
-  width: 290px;
+  width: 230px;
   margin: 5px;
 }
 .content .box-1-1 .post-thumbnail {
-  height: 290px;
+  height: 230px;
 }
 .content .box-1-2 {
-  width: 290px;
+  width: 230px;
   margin: 5px;
 }
 .content .box-1-2 .post-thumbnail {
-  height: 600px;
+  height: 480px;
 }
 .content .box-2-1 {
-  width: 590px;
+  width: 470px;
   margin: 5px;
 }
 .content .box-2-1 .post-thumbnail {
-  height: 290px;
+  height: 230px;
 }
 .content .box-2-2 {
-  width: 590px;
+  width: 470px;
   margin: 5px;
 }
 .content .box-2-2 .post-thumbnail {
-  height: 600px;
+  height: 480px;
 }
 .content .grid-sizer {
-  width: 300px;
+  width: 240px;
 }
 .content .post-box {
   margin-bottom: 10px;
 }
 }
-@media all and (min-width: 750px) {
+@media all and (min-width: 720px) {
 .page {
-  width: 750px;
+  width: 720px;
 }
 .content .grid-sizer {
-  width: 250px;
-  height: 260px;
+  width: 240px;
+  height: 250px;
 }
 .content .box-1-1 {
-  width: 240px;
+  width: 230px;
   margin: 5px;
 }
 .content .box-1-1 .post-thumbnail {
-  height: 240px;
+  height: 230px;
 }
 .content .box-1-2 {
-  width: 240px;
+  width: 230px;
   margin: 5px;
 }
 .content .box-1-2 .post-thumbnail {
-  height: 500px;
+  height: 480px;
 }
 .content .box-2-1 {
-  width: 490px;
+  width: 470px;
   margin: 5px;
 }
 .content .box-2-1 .post-thumbnail {
-  height: 240px;
+  height: 230px;
 }
 .content .box-2-2 {
-  width: 490px;
+  width: 470px;
   margin: 5px;
 }
 .content .box-2-2 .post-thumbnail {
-  height: 500px;
+  height: 480px;
 }
 .content .grid-sizer {
-  width: 250px;
+  width: 240px;
 }
 .content .post-box {
   margin-bottom: 10px;

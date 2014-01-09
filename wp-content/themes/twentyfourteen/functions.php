@@ -25,6 +25,8 @@
  * @since Twenty Fourteen 1.0
  */
 
+set_post_thumbnail_size( 672, 372, true ); 
+add_image_size( 'twentyfourteen-full-width', 1038, 576, true );
 /**
  * Set up the content width value based on the theme's design.
  *

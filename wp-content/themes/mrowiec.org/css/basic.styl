@@ -105,13 +105,8 @@ a
             padding:10px
             text-align:justify
 
-    footer
-        overflow: hidden
-        .slider
-            width: 9600px
-            .post-box
-                span(1/60)
-                margin: 0px 3px
+    footer.post
+        display:none
 
     header.page
         p
@@ -129,6 +124,8 @@ a
         
     .post-box 
         _background=_black + 3%
+        a
+            color: _white - 20%
         .post-box-container
             background-color: _background
             border: 1px solid _brown_dark
@@ -140,9 +137,12 @@ a
         .post-meta
             display:none;
             width: 98%
-            color: _brown_middle
-            font-size: 90%
-            font-style: italic
+            color: _white - 40%
+            font-size: 80%
+            .post-long-description
+                display:none;
+            a
+                text-decoration: underline
         .post-thumbnail
             cursor:pointer
             width: 100%
@@ -159,8 +159,9 @@ a
 
 
 // ------- media queries for different sizes -----
-_widths = 400 600 750 960
+_widths = 400 480 720 960
 _cols = 2 2 3 4 
+_max_width = 150 200 240 240 240
 
 _columns = _cols[i]
 
@@ -168,10 +169,6 @@ _page_width = 300
 .page 
     width: unit(_page_width, px)
     margin: 0 auto
-
-    footer.post
-        width:100%
-        padding: 16px 0px
 
     footer.page
         border-top: 1px solid _white - 40%
