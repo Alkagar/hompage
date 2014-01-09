@@ -20,7 +20,7 @@
                 <ol class='navigation'>
                     <li><a href="/">[ home ]</a></li>
                     <li><a href="/photos">[ photo ]</a></li>
-                    <li><a href="/it">[ it blog ]</a></li>
+                    <li><a href="/it">[ blog ]</a></li>
                     <li><a href="/portfolio">[ portfolio ]</a></li>
                     <li><a href="/about">[ about ]</a></li>
                 </ol>

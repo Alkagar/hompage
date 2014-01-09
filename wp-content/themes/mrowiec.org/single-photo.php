@@ -4,15 +4,19 @@
     <article>
     <header class='page'>
         <h2> <?php the_field('title'); ?> </h2>
+        <div class='post-meta'>
+            posted on <?php the_date('d/m/Y'); ?>
+        </div>
     </header>
+
+    <?php if(get_field('long_description')) : ?>
     <p>
-    <?php the_field('short_description'); ?>
+        <?php the_field('long_description'); ?>
     </p>
+    <?php endif;?>
+
     <p>
-    <?php the_field('long_description'); ?>
-    </p>
-    <p>
-        <?php echo get_the_tag_list('Tags: ',', ',''); ?>
+    <?php echo get_the_term_list(get_the_ID(), 'photo-tags', 'Tags: ',', ',''); ?>
     </p>
     <?php 
         $image = get_field('thumbnail_image'); 

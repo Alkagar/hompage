@@ -23,7 +23,6 @@ jQuery(document).ready(function($) {
         meta.append(metaDate);
     });
 
-
     $('.post-type-photo .post-thumbnail').click(function() {
         var longDescription = $(this).parent().parent().find('.post-long-description').html();
         $.colorbox({
@@ -37,6 +36,12 @@ jQuery(document).ready(function($) {
     });
     $('.post-type-photo a.permalink').click(function(e) {
         e.preventDefault();
+    });
+
+    $('.single-portfolio .images a.image').colorbox({
+        'maxWidth' : '90%',
+        'maxHeight' : '90%',
+        'rel' : 'portfolio-images'
     });
 
     function configureIsotope() {

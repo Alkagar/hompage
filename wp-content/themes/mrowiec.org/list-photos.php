@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Photos
+Template Name: Blog photos
 */
 ?>
 <?php get_header(); ?>

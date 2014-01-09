@@ -513,6 +513,25 @@ a {
   color: #999;
   text-decoration: underline;
 }
+.content.single-blog a {
+  color: #999;
+  text-decoration: underline;
+}
+.content.single-portfolio {
+  overflow: visible;
+}
+.content.single-portfolio img {
+  border: 3px solid #999;
+  float: left;
+  margin: 5px;
+}
+.content.single-portfolio .image {
+  overflow: visible;
+}
+.content.single-portfolio a {
+  color: #999;
+  text-decoration: underline;
+}
 .content.single-photo img {
   border: 3px solid #999;
   width: auto;
@@ -523,6 +542,10 @@ a {
   margin-left: auto;
   padding-left: 0;
   padding-right: 0;
+}
+.content.single-photo a {
+  color: #999;
+  text-decoration: underline;
 }
 .content {
   width: 100%;
@@ -550,6 +573,10 @@ a {
 }
 .content header.page a {
   color: #7f5d3e;
+}
+.content header.page .post-meta {
+  text-align: right;
+  font-size: 80%;
 }
 .content .post-box a {
   color: #ccc;
@@ -598,6 +625,7 @@ a {
   margin: 0 auto;
 }
 .page footer.page {
+  clear: both;
   border-top: 1px solid #999;
   text-align: right;
   padding: 0px 0px;

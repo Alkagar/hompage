@@ -7,7 +7,7 @@ Template Name: IT blog
 <div class="content isotope">
     <?php 
         $args = array(
-            'post_type' => array('blog-post',),
+            'post_type' => array('blog',),
         );
         $the_query = new WP_Query($args);
     ?>

@@ -103,10 +103,33 @@ a
         color: _white - 40%
         text-decoration: underline
 
+.content.single-blog
+    a
+        color: _white - 40%
+        text-decoration: underline
+
+.content.single-portfolio
+    overflow: visible
+    img
+        border:3px solid _white - 40%
+        float: left
+        margin:5px;
+    .image
+        overflow: visible
+
+
+    a
+        color: _white - 40%
+        text-decoration: underline
+
 .content.single-photo
     img
         border:3px solid _white - 40%
         center(80%)
+    a
+        color: _white - 40%
+        text-decoration: underline
+
 .content
     width: 100%
     margin-top: 15px
@@ -130,10 +153,10 @@ a
             color: _white
         a
             color: _brown
-
-
-
-        
+        .post-meta
+            text-align: right
+            font-size:80%
+       
     .post-box 
         _background=_black + 3%
         a
@@ -181,6 +204,7 @@ _page_width = 300
     margin: 0 auto
 
     footer.page
+        clear:both
         border-top: 1px solid _white - 40%
         text-align: right
         padding: 0px 0px

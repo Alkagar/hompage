@@ -1,8 +1,13 @@
+<?php
+/*
+Template Name: Blog posts
+*/
+?>
 <?php get_header(); ?>
 <div class="content isotope">
     <?php 
         $args = array(
-            'post_type' => array('photo', 'it-portfolio', 'blog',),
+            'post_type' => array('blog-post',),
         );
         $the_query = new WP_Query($args);
     ?>

@@ -41,9 +41,9 @@
             </div>
             <div class="post-long-description"> 
                 <div class='colorbox-photo-description'>
-                    <?php echo get_the_tag_list('Tags: ',', ',''); ?>
+                    <?php echo get_the_term_list(get_the_ID(), 'photo-tags', 'Tags: ',', ',''); ?>
                     <br />
-                    Description: <?php the_field('long_description'); ?> 
+                    Description: <?php the_field('short_description'); ?> 
                 </div>
             </div>
         </div>
