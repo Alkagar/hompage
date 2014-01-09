@@ -40,9 +40,11 @@
                 </span>
             </div>
             <div class="post-long-description"> 
-                <?php echo get_the_tag_list('Tags: ',', ',''); ?>
-                <br />
-                Description: <?php the_field('long_description'); ?> 
+                <div class='colorbox-photo-description'>
+                    <?php echo get_the_tag_list('Tags: ',', ',''); ?>
+                    <br />
+                    Description: <?php the_field('long_description'); ?> 
+                </div>
             </div>
         </div>
     </div>

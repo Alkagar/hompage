@@ -25,7 +25,7 @@ jQuery(document).ready(function($) {
 
 
     $('.post-type-photo .post-thumbnail').click(function() {
-        var longDescription = $(this).find('.post-long-description').html()
+        var longDescription = $(this).parent().parent().find('.post-long-description').html();
         $.colorbox({
             href: $(this).data('image'), 
             'maxWidth' : '90%', 
