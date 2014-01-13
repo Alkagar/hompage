@@ -1,13 +1,14 @@
 <?php
 /*
-Template Name: Portfolio
+Template Name: -portfolio-
 */
+global $_POST_TYPE;
 ?>
 <?php get_header(); ?>
 <div class="content isotope">
     <?php 
         $args = array(
-            'post_type' => array('it-portfolio',),
+            'post_type' => array($_POST_TYPE['portfolio'],),
         );
         $the_query = new WP_Query($args);
     ?>

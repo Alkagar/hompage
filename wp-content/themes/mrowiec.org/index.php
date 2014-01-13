@@ -1,8 +1,11 @@
-<?php get_header(); ?>
+<?php 
+    get_header(); 
+    global $_POST_TYPE;
+?>
 <div class="content isotope">
     <?php 
         $args = array(
-            'post_type' => array('photo', 'it-portfolio', 'blog',),
+            'post_type' => $_POST_TYPE,
         );
         $the_query = new WP_Query($args);
     ?>

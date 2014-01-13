@@ -1,13 +1,14 @@
 <?php
 /*
-Template Name: Blog photos
+Template Name: -photo-
 */
+global $_POST_TYPE;
 ?>
 <?php get_header(); ?>
 <div class="content isotope">
     <?php 
         $args = array(
-            'post_type' => array('photo',),
+            'post_type' => array($_POST_TYPE['photo'],),
         );
         $the_query = new WP_Query($args);
     ?>

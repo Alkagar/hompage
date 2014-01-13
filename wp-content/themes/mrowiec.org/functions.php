@@ -1,4 +1,13 @@
 <?php
+    // ---- configuration ----------------------------------
+    global $_POST_TYPE; 
+
+    $_POST_TYPE = array();
+    $_POST_TYPE['portfolio'] = 'portfolio';
+    $_POST_TYPE['photo'] = 'photo';
+    $_POST_TYPE['blog'] = 'blog';
+
+
     function theme_css() {
         wp_enqueue_style( 'basic', get_template_directory_uri() . '/css/basic.css' );
         wp_enqueue_style( 'bxSlider', get_template_directory_uri() . '/css/jquery.bxslider.css' );
@@ -17,5 +26,6 @@
     add_action( 'wp_enqueue_scripts', 'theme_css' );
     add_action( 'wp_enqueue_scripts', 'theme_script' );
 
-
     add_theme_support( 'menu' );
+
+
