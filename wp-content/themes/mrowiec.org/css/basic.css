@@ -630,8 +630,9 @@ a {
   text-align: right;
   padding: 0px 0px;
   margin-top: 10px;
-  color: #7f5d3e;
+  color: #666;
   font-size: 80%;
+  padding-bottom: 10px;
 }
 .content .grid-sizer {
   width: 150px;
