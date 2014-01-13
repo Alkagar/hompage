@@ -29,7 +29,7 @@
                 data-color="<?php echo $col;?>" 
                 data-black="<?php echo $bw;?>">
                 <div class="post-title">
-                    <?php the_field('title'); echo ' ( ' . get_post_type() . ' ) '; ?>
+                    <?php the_field('title'); ?>
                 </div>
             </div>
         </a>
