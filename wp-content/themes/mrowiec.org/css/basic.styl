@@ -1,22 +1,30 @@
 // ----- imports --------------------------
 @import index
 
-// ----- grid configuration ---------------
+// ----- grid configuration [START] ---------------
+
 //for n in (1..24) 
 //    .span_24_{n}
 //        span(n/24)
 //    .col_24_{n}
 //        col(n/24)
 
+// ----- grid configuration [END] ---------------
 
-// ----- basic colors ---------------------
+
+// ----- basic colors [START] ---------------------
+
 _black = #000000
 _white = #FFFFFF
 _brown = #7F5D3E
 _brown_dark = _brown - 70%
 _brown_middle = _brown - 30%
+_white_dark = _white - 40%
 
-_page_width = 960
+// ----- basic colors [END] ---------------------
+
+
+// ------- functions [START] -------------------------
 
 opacity(r,g,b,a)
     /* Fallback for web browsers that doesn't support RGBa */
@@ -28,8 +36,10 @@ opacity(r,g,b,a)
     /* For IE 8*/
     -ms-filter: unquote('"progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)"')
 
-navigation(lipadding)
+// ------- functions [END] -------------------------
 
+
+// ------- basic styling [START] -------------------------
 *
     font-family: 'Raleway', sans-serif !important;
 
@@ -41,18 +51,30 @@ body
 h1 
     font-size: 150%
     padding: 10px 0px 5px 10px
-    //padding: 10px 0px
-    color: _white - 40%
+    color: _white_dark
     text-transform:lowercase
 
 h2 
     font-size:130%
-    color: _white - 40%
+    color: _white_dark
     text-transform:lowercase
     padding: 0px 5px
 
 a
     text-decoration: none
+
+.colorbox-photo-description
+    background-color: _black
+    padding:10px
+    opacity(0,0,0,0.8)
+    a
+        color: _white_dark
+        text-decoration: underline
+
+// ------- basic styling [END] -------------------------
+
+
+// ------- page styling [START] -------------------------
 
 .banner
     display: none
@@ -94,41 +116,6 @@ a
             img.social-ico
                 width: 16px
                 height: 16px
-
-.colorbox-photo-description
-    background-color: _black
-    padding:10px
-    opacity(0,0,0,0.8)
-    a
-        color: _white - 40%
-        text-decoration: underline
-
-.content.single-blog
-    a
-        color: _white - 40%
-        text-decoration: underline
-
-.content.single-portfolio
-    overflow: visible
-    img
-        border:3px solid _white - 40%
-        float: left
-        margin:5px;
-    .image
-        overflow: visible
-
-
-    a
-        color: _white - 40%
-        text-decoration: underline
-
-.content.single-photo
-    img
-        border:3px solid _white - 40%
-        center(80%)
-    a
-        color: _white - 40%
-        text-decoration: underline
 
 .content
     width: 100%
@@ -172,7 +159,7 @@ a
         .post-meta
             display:none;
             width: 98%
-            color: _white - 40%
+            color: _white_dark
             font-size: 80%
             a
                 text-decoration: underline
@@ -181,37 +168,64 @@ a
             width: 100%
             background-color: _background
             background-size: cover
-            background-image: url(../gfx/thumb-1.png)
 
-// ------- commons -------------------------
-.align-left
-    text-align: left
-
-.align-right
-    text-align: right
+// ------- page styling [END] -------------------------
 
 
-// ------- media queries for different sizes -----
+// ------- single pages styling [START] -------------------------
+
+.content.single-blog
+    a
+        color: _white_dark
+        text-decoration: underline
+
+.content.single-portfolio
+    overflow: visible
+    img
+        border:3px solid _white_dark
+        float: left
+        margin:5px;
+    .image
+        overflow: visible
+
+
+    a
+        color: _white_dark
+        text-decoration: underline
+
+.content.single-photo
+    img
+        border:3px solid _white_dark
+        center(80%)
+    a
+        color: _white_dark
+        text-decoration: underline
+
+// ------- single pages styling [END] -------------------------
+
+
+// ------- media queries for different sizes [START]-----
+
 _widths = 400 480 720 960
 _cols = 2 2 3 4 
 _max_width = 150 200 240 240 240
-
 _columns = _cols[i]
-
 _page_width = 300 
+
 .page 
     width: unit(_page_width, px)
     margin: 0 auto
 
     footer.page
         clear:both
-        border-top: 1px solid _white - 40%
+        border-top: 1px solid _white_dark
         text-align: right
         padding: 0px 0px
         margin-top: 10px 
         color: _white - 60%   
         font-size: 80%
         padding-bottom:10px
+
 .content
     _padding = 10
     _margin = _padding/2
@@ -302,10 +316,13 @@ bp(750px)
         text-align:right
         li
             padding: 0px 10px
+
 h1
     font-size: 200%
+
 h2
     font-size: 150%
+
 .content
     article
         p
@@ -318,3 +335,16 @@ bp(960px)
         li
             padding: 0px 35px
 endbp()
+
+// ------- media queries for different sizes [START]-----
+
+
+// ------- commons [START] -------------------------
+
+.align-left
+    text-align: left
+
+.align-right
+    text-align: right
+    
+// ------- commons [END] -------------------------
