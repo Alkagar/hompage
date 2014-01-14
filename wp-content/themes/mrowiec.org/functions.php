@@ -26,6 +26,6 @@
     add_action( 'wp_enqueue_scripts', 'theme_css' );
     add_action( 'wp_enqueue_scripts', 'theme_script' );
 
-    add_theme_support( 'menu' );
+    add_theme_support( 'menus' );
 
 
