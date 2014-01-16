@@ -43,14 +43,14 @@
                         <?php echo get_the_term_list(get_the_ID(), 'photo-tags', 'Tags: ',', ',''); ?>
                     </div>
                     <div>
-                        Description: <?php the_field('short_description'); ?> 
-                    </div>
-                    <div>
                         <?php
                             $commentsCount = get_comments_number();
                             $commentsLink = sprintf( _n( 'One comment', '%1$s comments', $commentsCount), $commentsCount);
                         ?>
                         <a href='<?php the_permalink(); ?>'><?php echo $commentsLink; ?> - add</a>
+                    </div>
+                    <div>
+                        Description: <?php the_field('short_description'); ?> 
                     </div>
                 </div>
             </div>
