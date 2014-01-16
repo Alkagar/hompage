@@ -422,12 +422,50 @@ h1 {
 }
 h2 {
   font-size: 130%;
-  color: #999;
+  color: #fff;
   text-transform: lowercase;
   padding: 0px 5px;
 }
+h3 {
+  color: #fff;
+  font-size: 110%;
+  padding: 10px 15px 0px 15px;
+}
 a {
   text-decoration: none;
+}
+.colorbox-photo-description {
+  background-color: #000;
+  padding: 10px;
+/* Fallback for web browsers that doesn't support RGBa */
+  background: #000;
+/* RGBa with opacity */
+  background: rgba(0,0,0,0.8);
+/* For IE 5.5 - 7*/
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+/* For IE 8*/
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+}
+.colorbox-photo-description a {
+  color: #999;
+  text-decoration: underline;
+}
+#comments .comment .comment-metadata {
+  margin-left: 25px;
+}
+#comments .comment .comment-metadata a {
+  text-decoration: none;
+  font-size: 80%;
+}
+#comments .comment {
+  border-bottom: 1px solid #261c13;
+  padding: 10px;
+}
+#comments .comment p {
+  margin: 0px;
+}
+#comments .comment.even {
+  background-color: #080808;
 }
 .banner {
   display: none;
@@ -497,62 +535,12 @@ a {
   width: 16px;
   height: 16px;
 }
-.colorbox-photo-description {
-  background-color: #000;
-  padding: 10px;
-/* Fallback for web browsers that doesn't support RGBa */
-  background: #000;
-/* RGBa with opacity */
-  background: rgba(0,0,0,0.8);
-/* For IE 5.5 - 7*/
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
-/* For IE 8*/
-  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
-}
-.colorbox-photo-description a {
-  color: #999;
-  text-decoration: underline;
-}
-.content.single-blog a {
-  color: #999;
-  text-decoration: underline;
-}
-.content.single-portfolio {
-  overflow: visible;
-}
-.content.single-portfolio img {
-  border: 3px solid #999;
-  float: left;
-  margin: 5px;
-}
-.content.single-portfolio .image {
-  overflow: visible;
-}
-.content.single-portfolio a {
-  color: #999;
-  text-decoration: underline;
-}
-.content.single-photo img {
-  border: 3px solid #999;
-  width: auto;
-  max-width: 80%;
-  float: none;
-  display: block;
-  margin-right: auto;
-  margin-left: auto;
-  padding-left: 0;
-  padding-right: 0;
-}
-.content.single-photo a {
-  color: #999;
-  text-decoration: underline;
-}
 .content {
   width: 100%;
   margin-top: 15px;
 }
 .content article {
-  color: #e6e6e6;
+  color: #999;
   line-height: 1.5em;
 }
 .content article p {
@@ -612,13 +600,40 @@ a {
   width: 100%;
   background-color: #080808;
   background-size: cover;
-  background-image: url("../gfx/thumb-1.png");
 }
-.align-left {
-  text-align: left;
+.content.single-blog a {
+  color: #999;
+  text-decoration: underline;
 }
-.align-right {
-  text-align: right;
+.content.single-portfolio {
+  overflow: visible;
+}
+.content.single-portfolio img {
+  border: 3px solid #999;
+  float: left;
+  margin: 5px;
+}
+.content.single-portfolio .image {
+  overflow: visible;
+}
+.content.single-portfolio a {
+  color: #999;
+  text-decoration: underline;
+}
+.content.single-photo img {
+  border: 3px solid #999;
+  width: auto;
+  max-width: 80%;
+  float: none;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 0;
+  padding-right: 0;
+}
+.content.single-photo a {
+  color: #999;
+  text-decoration: underline;
 }
 .page {
   width: 300px;
@@ -894,4 +909,10 @@ h2 {
 .menu ol.navigation li {
   padding: 0px 35px;
 }
+}
+.align-left {
+  text-align: left;
+}
+.align-right {
+  text-align: right;
 }

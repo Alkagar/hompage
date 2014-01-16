@@ -1,15 +1,16 @@
 <?php
     $thumbs = get_field('thumbnail_image');
-    $url = $thumbs['url'];
+    $url = str_replace('8080', '10382', $thumbs['url']);
 
     $thumbWidth = get_field('thumbnail_width');
     $thumbHeight = get_field('thumbnail_height');
 
     $basicSize = 240;
+    $defaultParametersForce = 'return=true&md5=0&force=true';
     $defaultParameters = 'return=true&md5=0';
     $grayscale = '&effect=grayscale';
     $actualThumbWidth = $thumbWidth * $basicSize;
-    $actualThumbHeight = $thumbHeight * $basicSize;
+    $actualThumbHeight = $thumbHeight * $bakicSize;
     $bw = thumbGen($url, $actualThumbWidth, $actualThumbHeight, $defaultParameters.$grayscale);
     $col = thumbGen($url, $actualThumbWidth, $actualThumbHeight, $defaultParameters);
 
@@ -22,7 +23,7 @@
         <a class='permalink' href='<?php the_permalink(); ?>'>
             <div class="post-thumbnail" 
                 style="background-image:url(<?php echo $col;?>); background-image:url(<?php echo $bw;?>);" 
-                data-image="<?php echo $url; ?>" 
+                data-image="<?php echo $thumbs['url']; ?>" 
                 data-color="<?php echo $col;?>" 
                 data-black="<?php echo $bw;?>">
                 <div class="post-title">
@@ -43,6 +44,13 @@
                     </div>
                     <div>
                         Description: <?php the_field('short_description'); ?> 
+                    </div>
+                    <div>
+                        <?php
+                            $commentsCount = get_comments_number();
+                            $commentsLink = sprintf( _n( 'One comment', '%1$s comments', $commentsCount), $commentsCount);
+                        ?>
+                        <a href='<?php the_permalink(); ?>'><?php echo $commentsLink; ?> - add</a>
                     </div>
                 </div>
             </div>

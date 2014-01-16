@@ -26,6 +26,7 @@
         <img src='<?php echo $imageUrl;?>' />
     </div>
 
+    <?php comments_template(); ?> 
     </article>
     <?php endwhile; endif; ?>
 
