@@ -9,7 +9,9 @@
         </div>
     </header>
 
+    <?php if(the_content()) : ?>
     <?php the_content(); ?>
+    <?php endif;?>
 
     <?php comments_template(); ?> 
     </article>

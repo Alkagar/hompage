@@ -9,8 +9,8 @@
         </div>
     </header>
 
-    <?php if(get_field('description')) : ?>
-    <?php the_field('description'); ?>
+    <?php if(the_content()) : ?>
+    <?php the_content(); ?>
     <?php endif;?>
 
     <p>

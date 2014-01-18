@@ -10,7 +10,9 @@
         <header class='page'>
         <h2> <?php echo the_title(); ?> </h2>
         </header>
+        <?php if(the_content()) : ?>
         <?php the_content(); ?>
+        <?php endif;?>
     </article>
     <?php endwhile; endif; ?>
 </div>
