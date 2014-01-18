@@ -8,7 +8,7 @@
     <body>
         <div class="page">
             <h1>
-                programmers blog about it adventures, photo and others...
+                <?php echo get_bloginfo('description'); ?>
             </h1>
             <div class="menu">
                 <?php get_sidebar('main'); ?>
