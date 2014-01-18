@@ -13,11 +13,12 @@
     <?php the_content(); ?>
     <?php endif;?>
 
+    <h3>technologies</h3>
     <p>
-    <?php echo get_the_term_list(get_the_ID(), 'technologies', 'Technologies: ',', ',''); ?>
+    <?php echo get_the_term_list(get_the_ID(), 'technologies', '',', ',''); ?>
     </p>
 
-    <h2> Images </h2>
+    <h3> images </h3>
     <div class='images'>
     <?php 
         $count = 1;
