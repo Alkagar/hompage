@@ -22,11 +22,11 @@
         wp_enqueue_script( 'isotope-perfectmasonry', get_template_directory_uri() . '/js/jquery.isotope.perfectmasonry.js');
         wp_enqueue_script( 'basic', get_template_directory_uri() . '/js/basic.js');
     }
-
-    add_action( 'wp_enqueue_scripts', 'theme_css' );
-    add_action( 'wp_enqueue_scripts', 'theme_script' );
-
-    add_theme_support( 'menus' );
+    function register_markdown() {
+        global $_POST_TYPE;
+        add_post_type_support( $_POST_TYPE['portfolio'], 'markdown-osi' );
+        add_post_type_support( $_POST_TYPE['blog'], 'markdown-osi' );
+    }
 
     if ( function_exists('register_sidebar') ) {
         register_sidebar(array(
@@ -41,3 +41,7 @@
         ));
     }
 
+    add_action( 'init', 'register_markdown' );
+    add_action( 'wp_enqueue_scripts', 'theme_css' );
+    add_action( 'wp_enqueue_scripts', 'theme_script' );
+    add_theme_support( 'menus' );
