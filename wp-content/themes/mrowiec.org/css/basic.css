@@ -544,8 +544,16 @@ a {
   line-height: 1.5em;
 }
 .content article p {
-  padding: 10px;
+  padding: 5px;
   text-align: justify;
+}
+.content article a {
+  color: #7f5d3e;
+}
+.content article ol li,
+.content article ul li {
+  margin-left: 25px;
+  list-style-type: square;
 }
 .content footer.post {
   display: none;
