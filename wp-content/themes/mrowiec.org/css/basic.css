@@ -450,6 +450,12 @@ a {
   color: #999;
   text-decoration: underline;
 }
+blockquote {
+  padding-left: 30px;
+  color: #ccc;
+  text-align: right;
+  font-style: italic;
+}
 #comments .comment .comment-metadata {
   margin-left: 25px;
 }
