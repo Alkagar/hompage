@@ -1,4 +1,20 @@
 <?php get_header(); ?>
+<?php
+
+$count = 1;
+$imagesCount = 4;
+$images = array();
+while($count <= $imagesCount) {
+    $fieldName = 'portfolio_images_' . $count;
+    if(get_field($fieldName)) {
+        $image = get_field($fieldName); 
+        $images[] = $image;
+    }
+    $count++;
+}
+$areImages = !empty($images);
+
+?>
 <div class="content single-portfolio">
     <?php if( have_posts() ) : while( have_posts() ) : the_post(); ?>
     <article>
@@ -18,28 +34,20 @@
     <?php echo get_the_term_list(get_the_ID(), 'technologies', '',', ',''); ?>
     </p>
 
-    <h3> images </h3>
+    <?php if($areImages) :?>
+        <h3> images </h3>
+    <?php endif; ?>
     <div class='images'>
     <?php 
-        $count = 1;
-        $imagesCount = 4;
-        while($count <= $imagesCount) {
-            $fieldName = 'portfolio_images_' . $count;
-            if(get_field($fieldName)) {
-                $image = get_field($fieldName); 
-                $fullUrl = $image['url'];
-                $thumb = $image['sizes']['medium'];
+        foreach($images as $image) {
+            $fullUrl = $image['url'];
+            $thumb = $image['sizes']['medium'];
             ?>
             <a class='image portfolio-images' href='<?php echo $fullUrl;?>'><img src='<?php echo $thumb; ?>' /></a>
             <?php
-
-            }
-            $count++;
         }
     ?>
     </div>
-
-
     </article>
     <?php endwhile; endif; ?>
 
